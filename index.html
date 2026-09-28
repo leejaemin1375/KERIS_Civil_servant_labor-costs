@@ -160,13 +160,14 @@
           </div>
         </div>
         <div style="font-size: 12px; color: #6e7884; margin-top: 12px;">월별 추이 · 단위 백만원</div>
-        <div style="margin-top: 6px; position: relative;">
-          <svg viewBox="0 0 1200 200" preserveAspectRatio="none" style="width: 100%; height: 110px; display: block;">
+        <div style="margin-top: 6px; flex: 1; display: flex; flex-direction: column; min-height: 130px;">
+          <div style="position: relative; flex: 1; min-height: 110px;">
+          <svg viewBox="0 0 1200 200" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block;">
             <line x1="0" y1="190" x2="1200" y2="190" stroke="#e3ebf4" stroke-width="1" vector-effect="non-scaling-stroke"></line>
             <polygon points="{{ otArea }}" fill="#2b8ad0" opacity="0.09"></polygon>
             <polyline points="{{ otLine }}" fill="none" stroke="#2b8ad0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
           </svg>
-          <div style="position: absolute; left: 0; right: 0; top: 0; height: 110px; display: flex;">
+          <div style="position: absolute; inset: 0; display: flex;">
             <sc-for list="{{ otPoints }}" as="p" hint-placeholder-count="12">
               <div onMouseEnter="{{ p.onEnter }}" onMouseLeave="{{ otLeave }}" style="flex: 1; position: relative; cursor: default;">
                 <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c9d6e3; opacity: {{ p.op }};"></div>
@@ -174,6 +175,7 @@
                 <div style="position: absolute; left: {{ p.tipLeft }}; top: {{ p.tipTop }}; transform: {{ p.tipTf }}; padding: 4px 8px; border-radius: 6px; background: #1e2124; color: #ffffff; font-size: 11.5px; white-space: nowrap; pointer-events: none; opacity: {{ p.op }}; z-index: 2;">{{ p.label }} <b style="font-family: 'JetBrains Mono', monospace;">{{ p.valText }}</b></div>
               </div>
             </sc-for>
+          </div>
           </div>
           <div style="display: flex; margin-top: 4px;">
             <sc-for list="{{ otPoints }}" as="p" hint-placeholder-count="12">
@@ -200,7 +202,7 @@
           </div>
         </div>
         <div style="font-size: 12px; color: #6e7884; margin-top: 12px;">등급별 지급 구조 · 3월 일시 지급 · 지급 대상 {{ psTargetText }}명 · 평균 지급률 {{ psBaseAvgText }}%</div>
-        <div style="display: grid; grid-template-columns: 44px minmax(0, 1fr) 90px 64px 70px; gap: 0 12px; align-items: center; margin-top: 8px; font-size: 12.5px;">
+        <div style="flex: 1; display: grid; grid-template-columns: 44px minmax(0, 1fr) 90px 64px 70px; align-content: space-between; gap: 0 12px; align-items: center; margin-top: 8px; font-size: 12.5px;">
           <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px;">등급</span>
           <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px;">금액 비중</span>
           <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px; text-align: right;">인원(비율)</span>
@@ -1493,10 +1495,10 @@ class Component extends DCLogic {
       otLine: otLine,
       otArea: otLine + ' 1150,190 50,190',
       otPoints: otVals.map((v, i) => {
-        const on = this.state.otHover === i, y = otY(v) / 200 * 110;
+        const on = this.state.otHover === i, y = otY(v) / 200 * 100;
         return { short: SHORT[i], label: (i + 1) + '월', valText: nf(v) + '백만원', op: on ? 1 : 0,
-          topPx: y + 'px', tipTop: (y - 8) + 'px', onEnter: () => this.setState({ otHover: i }),
-          tipLeft: i < 2 ? '0' : (i > 9 ? '100%' : '50%'), tipTf: i < 2 ? 'translate(0, -100%)' : (i > 9 ? 'translate(-100%, -100%)' : 'translate(-50%, -100%)') };
+          topPx: y + '%', tipTop: y + '%', onEnter: () => this.setState({ otHover: i }),
+          tipLeft: i < 2 ? '0' : (i > 9 ? '100%' : '50%'), tipTf: i < 2 ? 'translate(0, calc(-100% - 8px))' : (i > 9 ? 'translate(-100%, calc(-100% - 8px))' : 'translate(-50%, calc(-100% - 8px))') };
       }),
       otLeave: () => this.setState({ otHover: null }),
       ...(() => {
