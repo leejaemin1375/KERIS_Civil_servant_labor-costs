@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #f4f7fa; }
+  body { font-family: "Noto Sans KR", system-ui, sans-serif; color: #16181b; font-size: 15px; line-height: 1.55; -webkit-font-smoothing: subpixel-antialiased; text-rendering: optimizeLegibility; }
+  * { box-sizing: border-box; }
+  a { color: #0d6ab8; text-decoration: none; }
+  a:hover { color: #2b8ad0; text-decoration: underline; }
+  input[type="range"] { accent-color: #0d6ab8; min-width: 0; }
+  table { border-collapse: collapse; }
+  summary::-webkit-details-marker { display: none; }
+  summary { list-style: none; }
+  @page { size: A4 landscape; margin: 12mm; }
+  @media print {
+    html, body { background: #ffffff !important; }
+    [data-print-hide] { display: none !important; }
+    [data-print-report] { display: block !important; }
+    [data-print-break] { break-before: page; }
+    tr, [data-print-keep] { break-inside: avoid; }
+  }
+</style>
+</helmet>
+<div data-print-hide="" style="min-height: 100vh; background: #f4f7fa;">
+  <div style="display: flex; height: 4px;">
+    <div style="flex: 1; background: #0d6ab8;"></div>
+    <div style="flex: 1; background: #83bd3f;"></div>
+    <div style="flex: 1; background: #f28c28;"></div>
+  </div>
+
+  <div style="background: #eef2f7; border-bottom: 1px solid #e3ebf4;">
+    <div style="width: min(1780px, 100% - 40px); margin: 0 auto; display: flex; align-items: center; gap: 8px; padding: 7px 0; font-size: 13px; color: #3c454f;">
+      <svg viewBox="0 0 30 20" style="width: 18px; height: 12px; border-radius: 2px; border: 1px solid #d6dee8; display: block; flex: none;">
+        <rect width="30" height="20" fill="#ffffff"></rect>
+        <path d="M9 10a3 3 0 0 1 6 0 3 3 0 0 0 6 0 6 6 0 0 0-12 0z" fill="#cd2e3a"></path>
+        <path d="M21 10a3 3 0 0 1-6 0 3 3 0 0 0-6 0 6 6 0 0 0 12 0z" fill="#0047a0"></path>
+        <g stroke="#1e2124" stroke-width="0.7">
+          <path d="M3.2 4.6l2.6 2.2M2.2 5.8l2.6 2.2M4.2 3.4l2.6 2.2"></path>
+          <path d="M23.4 13.4l2.6 2.2M22.4 14.6l2.6 2.2M24.4 12.2l2.6 2.2"></path>
+          <path d="M25.8 4.6l-2.6 2.2M26.8 5.8l-2.6 2.2M24.8 3.4l-2.6 2.2"></path>
+          <path d="M6.8 13.4l-2.6 2.2M5.8 14.6l-2.6 2.2M7.8 12.2l-2.6 2.2"></path>
+        </g>
+      </svg>
+      <span>이 사이트는 대한민국 공식 전자정부 누리집입니다.</span>
+    </div>
+  </div>
+
+  <header style="background: #ffffff; border-bottom: 1px solid #e3ebf4;">
+    <div style="width: min(1780px, 100% - 40px); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 15px 0 12px;">
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <div style="display: flex; gap: 3px;">
+          <div style="width: 9px; height: 26px; border-radius: 3px; background: #0d6ab8;"></div>
+          <div style="width: 9px; height: 26px; border-radius: 3px; background: #83bd3f;"></div>
+          <div style="width: 9px; height: 26px; border-radius: 3px; background: #f28c28;"></div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 17.5px; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap;">전북특별자치도교육청 인건비 예산 추계 시스템</span>
+          <span style="font-size: 13px; color: #525c68;">교육비특별회계 · 공무원 인건비</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div style="width: min(1780px, 100% - 40px); margin: 0 auto; padding: 18px 0 4px;">
+    <div style="display: flex; align-items: center; gap: 7px; font-size: 13px; color: #525c68;">
+      <span>홈</span><span style="color: #b5c0cc;">›</span><span>교육비특별회계 예산 편성</span><span style="color: #b5c0cc;">›</span><span style="color: #1e2124; font-weight: 500;">인건비 전망 및 시뮬레이션</span>
+    </div>
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-top: 8px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <h1 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: -0.03em;">공무원 인건비 예산 편성 추계 및 시뮬레이션</h1>
+          <span style="padding: 3px 10px; border-radius: 999px; background: #fdf3e8; color: #9e6a00; font-size: 12px; font-weight: 700; white-space: nowrap;">표본 데이터</span>
+        </div>
+        <p style="margin: 5px 0 0; font-size: 15px; color: #3c454f;">{{ year }}년도 교육비특별회계 본예산 편성을 위한 인건비 전망과 변수 조정 시뮬레이션입니다. 교원·교육공무직은 대상에서 제외됩니다.</p>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; white-space: nowrap;">
+        <div style="height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #e3ebf4; background: #ffffff; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #3c454f;">
+          <span>기준 정원</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #1e2124;">{{ headcountText }}명</span>
+        </div>
+        <button style="height: 40px; padding: 0 15px; border-radius: 8px; border: 1px solid #0d6ab8; background: #0d6ab8; font-family: inherit; font-size: 14px; font-weight: 700; color: #ffffff; cursor: pointer;" style-hover="background: #2b8ad0; border-color: #2b8ad0;" onClick="{{ onPrint }}">보고서 다운로드</button>
+      </div>
+    </div>
+  </div>
+
+  <div style="width: min(1780px, 100% - 40px); margin: 16px auto 0; display: flex; gap: 4px; border-bottom: 1px solid #e3ebf4;">
+    <button onClick="{{ onTabBase }}" style="{{ tabBaseStyle }}">{{ year }}년 추계안</button>
+    <button onClick="{{ onTabSim }}" style="{{ tabSimStyle }}">시뮬레이션</button>
+  </div>
+
+  <sc-if value="{{ tabBase }}" hint-placeholder-val="{{ true }}">
+  <section style="width: min(1780px, 100% - 40px); margin: 0 auto; padding: 18px 0 0; display: flex; flex-direction: column; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <div style="width: 4px; height: 19px; border-radius: 2px; background: #0d6ab8;"></div>
+      <h2 style="margin: 0; font-size: 19px; font-weight: 700;">추계 총액 요약</h2>
+      <span style="padding: 3px 10px; border-radius: 999px; background: #eef2f7; color: #0d6ab8; font-size: 13px; font-weight: 500;">추계안 · 보수 인상률 {{ baseRaiseText }}%</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px;">
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 20px 22px;">
+        <div style="display: flex; align-items: center; gap: 7px; flex-wrap: wrap;">
+          <span style="font-size: 13px; color: #525c68;">{{ year }}년 추계안 인건비</span>
+          <span style="padding: 1px 8px; border-radius: 999px; background: #eef2f7; color: #525c68; font-size: 12px; font-weight: 500; white-space: nowrap;">기준값 · 고정</span>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; color: #3c454f;">{{ totalText }}</span>
+          <span style="font-size: 13px; color: #3c454f;">백만원</span>
+        </div>
+        <div style="margin-top: 6px; font-size: 13px; color: #525c68;">1인당 {{ perCapitaText }}</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 20px 22px;">
+        <div style="font-size: 13px; color: #525c68;">전년({{ prevYear }}년) 대비 증감액</div>
+        <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; color: #de3412; letter-spacing: -0.01em;">{{ deltaText }}</span>
+          <span style="font-size: 13px; color: #3c454f;">백만원</span>
+        </div>
+        <div style="margin-top: 6px; font-size: 13px; color: #525c68;">전년 예산 {{ prevTotalText }}백만원</div>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 20px 22px;">
+        <div style="font-size: 13px; color: #525c68;">전년 대비 증감률</div>
+        <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 8px;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; color: #de3412; letter-spacing: -0.01em;">{{ deltaPctText }}</span>
+          <span style="font-size: 13px; color: #3c454f;">%</span>
+        </div>
+        <div style="margin-top: 6px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #525c68;">
+          <span style="padding: 2px 9px; border-radius: 999px; background: #fdeeea; color: #de3412; font-weight: 500;">증가</span>
+          <span>3년 평균 +4.6%</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 4px;">
+      <div style="width: 4px; height: 17px; border-radius: 2px; background: #4aa3dc;"></div>
+      <h3 style="margin: 0; font-size: 17px; font-weight: 700;">추계 상세</h3>
+      <span style="font-size: 13px; color: #525c68;">추계안 기준 · 증감률은 전년 집행액 기준 · 인상률·진급·인원을 바꾸면 조정안에 자동 반영</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 12px;">
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 16px 20px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-size: 15px; font-weight: 700;">초과근무수당</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums;">{{ otTotalText }}</span>
+            <span style="font-size: 12px; color: #525c68;">백만원</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #525c68; white-space: nowrap;">
+            <span style="padding: 1px 8px; border-radius: 999px; background: #fdeeea; color: #de3412; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ otPctText }}%</span>
+            <span>전년 집행 {{ otPrevText }}</span>
+          </div>
+        </div>
+        <div style="font-size: 12px; color: #6e7884; margin-top: 12px;">월별 추이 · 단위 백만원</div>
+        <div style="margin-top: 6px; position: relative;">
+          <svg viewBox="0 0 1200 200" preserveAspectRatio="none" style="width: 100%; height: 110px; display: block;">
+            <line x1="0" y1="190" x2="1200" y2="190" stroke="#e3ebf4" stroke-width="1" vector-effect="non-scaling-stroke"></line>
+            <polygon points="{{ otArea }}" fill="#2b8ad0" opacity="0.09"></polygon>
+            <polyline points="{{ otLine }}" fill="none" stroke="#2b8ad0" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
+          </svg>
+          <div style="position: absolute; left: 0; right: 0; top: 0; height: 110px; display: flex;">
+            <sc-for list="{{ otPoints }}" as="p" hint-placeholder-count="12">
+              <div onMouseEnter="{{ p.onEnter }}" onMouseLeave="{{ otLeave }}" style="flex: 1; position: relative; cursor: default;">
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c9d6e3; opacity: {{ p.op }};"></div>
+                <div style="position: absolute; left: 50%; top: {{ p.topPx }}; width: 9px; height: 9px; margin: -5px 0 0 -5px; border-radius: 50%; background: #ffffff; border: 2px solid #2b8ad0; box-sizing: border-box; opacity: {{ p.op }};"></div>
+                <div style="position: absolute; left: {{ p.tipLeft }}; top: {{ p.tipTop }}; transform: {{ p.tipTf }}; padding: 4px 8px; border-radius: 6px; background: #1e2124; color: #ffffff; font-size: 11.5px; white-space: nowrap; pointer-events: none; opacity: {{ p.op }}; z-index: 2;">{{ p.label }} <b style="font-family: 'JetBrains Mono', monospace;">{{ p.valText }}</b></div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display: flex; margin-top: 4px;">
+            <sc-for list="{{ otPoints }}" as="p" hint-placeholder-count="12">
+              <div style="flex: 1; text-align: center; font-size: 11px; color: #6e7884; white-space: nowrap;">{{ p.short }}</div>
+            </sc-for>
+          </div>
+        </div>
+        <div style="margin-top: auto; padding-top: 12px; display: flex; gap: 22px; flex-wrap: wrap; font-size: 12px; color: #525c68;">
+          <span>월평균 인정시간 <b style="font-family: 'JetBrains Mono', monospace; color: #1e2124;">18.4시간</b></span>
+          <span>지급 대상 <b style="font-family: 'JetBrains Mono', monospace; color: #1e2124;">{{ otTargetText }}명</b></span>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 16px 20px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-size: 15px; font-weight: 700;">성과상여금</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums;">{{ psTotalText }}</span>
+            <span style="font-size: 12px; color: #525c68;">백만원</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #525c68; white-space: nowrap;">
+            <span style="padding: 1px 8px; border-radius: 999px; background: #fdeeea; color: #de3412; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ psPctText }}%</span>
+            <span>전년 집행 {{ psPrevText }}</span>
+          </div>
+        </div>
+        <div style="font-size: 12px; color: #6e7884; margin-top: 12px;">등급별 지급 구조 · 3월 일시 지급 · 지급 대상 {{ psTargetText }}명 · 평균 지급률 {{ psBaseAvgText }}%</div>
+        <div style="display: grid; grid-template-columns: 44px minmax(0, 1fr) 90px 64px 70px; gap: 0 12px; align-items: center; margin-top: 8px; font-size: 12.5px;">
+          <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px;">등급</span>
+          <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px;">금액 비중</span>
+          <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px; text-align: right;">인원(비율)</span>
+          <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px; text-align: right;">지급률</span>
+          <span style="font-size: 11px; color: #6e7884; padding-bottom: 4px; text-align: right;">백만원</span>
+          <sc-for list="{{ psGrades }}" as="g" hint-placeholder-count="4">
+            <span style="font-weight: 700; padding: 5px 0; border-top: 1px solid #f1f5f9;">{{ g.name }}</span>
+            <div style="display: flex; align-items: center; gap: 8px; padding: 5px 0; border-top: 1px solid #f1f5f9; min-width: 0;">
+              <div style="flex: 1; height: 8px; border-radius: 4px; background: #f4f7fa; overflow: hidden;"><div style="height: 100%; border-radius: 4px; background: {{ g.color }}; width: {{ g.widthPct }};"></div></div>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #525c68; width: 42px; text-align: right;">{{ g.sharePct }}</span>
+            </div>
+            <span style="font-family: 'JetBrains Mono', monospace; text-align: right; padding: 5px 0; border-top: 1px solid #f1f5f9; color: #3c454f;">{{ g.nText }}명({{ g.headPct }})</span>
+            <span style="font-family: 'JetBrains Mono', monospace; text-align: right; padding: 5px 0; border-top: 1px solid #f1f5f9; color: #3c454f;">{{ g.rateText }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; text-align: right; padding: 5px 0; border-top: 1px solid #f1f5f9; font-weight: 700;">{{ g.amtText }}</span>
+          </sc-for>
+        </div>
+        <div style="margin-top: 10px; font-size: 11.5px; color: #6e7884; text-wrap: pretty;">2026년 지급기준액(천원) {{ psStdText }} · 2027년은 인상률 {{ baseRaiseText }}% 반영 · 등급 비율·지급률은 지침 고정값</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 16px 20px; display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: baseline; gap: 10px;">
+            <span style="font-size: 15px; font-weight: 700;">인원 변동</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums;">{{ hcAvgWorkText }}</span>
+            <span style="font-size: 12px; color: #525c68;">명 · 월평균 근무</span>
+          </div>
+          <span style="font-size: 12px; color: #525c68; white-space: nowrap;">재직 {{ headcountText }} → {{ hcEndText }}</span>
+        </div>
+        <div style="font-size: 12px; color: #6e7884; margin-top: 12px;">월말 근무 인원(재직 − 휴직) · 단위 명</div>
+        <div style="position: relative; display: flex; align-items: flex-end; gap: 6px; height: 110px; margin-top: 6px; border-bottom: 1px solid #e3ebf4;">
+          <sc-for list="{{ hcMonths }}" as="m" hint-placeholder-count="12">
+            <div onMouseEnter="{{ m.onEnter }}" onMouseLeave="{{ hcLeave }}" style="flex: 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; min-width: 0;">
+              <div style="width: 100%; max-width: 20px; border-radius: 3px 3px 0 0; background: {{ m.barColor }}; height: {{ m.hPct }};"></div>
+              <div style="position: absolute; left: {{ m.tipLeft }}; bottom: {{ m.hPct }}; transform: {{ m.tipTf }}; padding: 5px 9px; border-radius: 6px; background: #1e2124; color: #ffffff; font-size: 11.5px; line-height: 1.5; white-space: nowrap; pointer-events: none; opacity: {{ m.op }}; z-index: 2;">
+                <div style="font-weight: 700;">{{ m.label }} 근무 <span style="font-family: 'JetBrains Mono', monospace;">{{ m.workText }}</span>명</div>
+                <div style="color: #c9d6e3;">재직 {{ m.nText }} · 휴직 {{ m.lvText }}{{ m.evText }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display: flex; gap: 6px; margin-top: 4px;">
+          <sc-for list="{{ hcMonths }}" as="m" hint-placeholder-count="12">
+            <div style="flex: 1; min-width: 0; text-align: center; font-size: 11px; color: #6e7884;">{{ m.short }}</div>
+          </sc-for>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 14px;">
+          <div style="background: #f8fafc; border-radius: 8px; padding: 9px 11px;">
+            <div style="font-size: 11.5px; color: #6e7884;">신규 채용</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #228738;">+{{ hcInText }}</div>
+            <div style="font-size: 11px; color: #6e7884;">3·9월</div>
+          </div>
+          <div style="background: #f8fafc; border-radius: 8px; padding: 9px 11px;">
+            <div style="font-size: 11.5px; color: #6e7884;">퇴직</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #de3412;">−{{ hcOutText }}</div>
+            <div style="font-size: 11px; color: #6e7884;">2월말 명퇴 · 6·12월말 정년</div>
+          </div>
+          <div style="background: #f8fafc; border-radius: 8px; padding: 9px 11px;">
+            <div style="font-size: 11.5px; color: #6e7884;">휴직 월평균</div>
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; color: #3c454f;">{{ hcLvAvgText }}</div>
+            <div style="font-size: 11px; color: #6e7884;">육아휴직 포함 · 3·9월 증가</div>
+          </div>
+        </div>
+        <div style="margin-top: auto; padding-top: 10px; font-size: 11.5px; color: #6e7884;">막대에 마우스를 올리면 월별 내역 표시 · 시기·인원은 가정값</div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <sc-if value="{{ tabSim }}" hint-placeholder-val="{{ false }}">
+  <div style="width: min(1780px, 100% - 40px); margin: 0 auto; padding: 18px 0 0;">
+    <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 4px; height: 19px; border-radius: 2px; background: #f28c28;"></div>
+        <h2 style="margin: 0; font-size: 19px; font-weight: 700;">시뮬레이션</h2>
+      </div>
+      <span style="font-size: 13px; color: #525c68;">조건을 바꿔 조정안을 만드는 탭입니다. 추계안 값은 바뀌지 않습니다.</span>
+    </div>
+  </div>
+  </sc-if>
+
+
+  <main style="width: min(1780px, 100% - 40px); margin: 0 auto; padding: 14px 0 40px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 16px;">
+
+    <sc-if value="{{ tabSim }}" hint-placeholder-val="{{ false }}">
+    <aside style="{{ asideStyle }}">
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-top: 3px solid #f28c28; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 20px 22px;">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+          <div style="font-size: 18px; font-weight: 700;">시뮬레이션 조건</div>
+          <sc-if value="{{ dirty }}" hint-placeholder-val="{{ true }}">
+            <span style="display: flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #fdf3e8; color: #9e6a00; font-size: 12px; font-weight: 500; white-space: nowrap;">
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: #f28c28;"></span>미적용
+            </span>
+          </sc-if>
+        </div>
+
+        <div style="margin-top: 16px; border: 1px solid #e3ebf4; border-radius: 10px; background: #f8fafc; padding: 14px 16px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <label style="font-size: 14px; font-weight: 500;">보수 인상률</label>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 21px; font-weight: 700; color: #0d6ab8; font-variant-numeric: tabular-nums;">{{ raiseText }}%</span>
+          </div>
+          <input type="range" min="0" max="8" step="0.1" value="{{ raise }}" onChange="{{ onRaise }}" style="width: 100%; margin-top: 10px; height: 24px; display: block;">
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: #6e7884; font-family: 'JetBrains Mono', monospace;">
+            <span>0%</span><span>기본 {{ baseRaiseText }}%</span><span>8%</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+          <sc-for list="{{ counters }}" as="c" hint-placeholder-count="3">
+            <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; border: 1px solid #e3ebf4; border-radius: 10px; background: #f8fafc; padding: 11px 14px;">
+              <div style="min-width: 0;">
+                <div style="font-size: 14px; font-weight: 500;">{{ c.label }}</div>
+                <div style="font-size: 12px; color: #525c68;">{{ c.hint }}</div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #e3ebf4; border-radius: 8px; background: #ffffff; height: 44px; padding: 0 12px;" style-focus-within="border-color: #0d6ab8; box-shadow: 0 0 0 3px rgba(13,106,184,0.12);">
+                <input type="text" inputMode="numeric" value="{{ c.text }}" onChange="{{ c.onInput }}" onBlur="{{ c.onBlur }}" aria-label="{{ c.label }} 인원" style="width: 68px; border: none; outline: none; background: transparent; text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; color: #1e2124; padding: 0;">
+                <span style="font-size: 13px; color: #525c68;">명</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+
+        <div style="margin-top: 10px; border: 1px solid #e3ebf4; border-radius: 10px; background: #f8fafc; padding: 13px 15px;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 10px;">
+            <span style="font-size: 14px; font-weight: 500;">진급 인원</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; color: #0d6ab8;">{{ promoAnnualText }}백만원</span>
+          </div>
+          <div style="font-size: 11.5px; color: #6e7884; margin-top: 2px;">최근 승진자 호봉 분포 및 호봉 재획정 기준 가중평균 적용</div>
+          <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 10px;">
+            <sc-for list="{{ promoRows }}" as="p" hint-placeholder-count="5">
+              <div style="display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 10px;">
+                <div style="min-width: 0;">
+                  <div style="font-size: 13px; font-weight: 500;">{{ p.label }}</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #e3ebf4; border-radius: 8px; background: #ffffff; height: 38px; padding: 0 10px;" style-focus-within="border-color: #0d6ab8; box-shadow: 0 0 0 3px rgba(13,106,184,0.12);">
+                  <input type="text" inputMode="numeric" value="{{ p.text }}" onChange="{{ p.onInput }}" onBlur="{{ p.onBlur }}" aria-label="{{ p.label }} 진급 인원" style="width: 52px; border: none; outline: none; background: transparent; text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; color: #1e2124; padding: 0;">
+                  <span style="font-size: 12px; color: #525c68;">명</span>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-top: 14px;">
+          <button onClick="{{ onReset }}" style="flex: 1; height: 42px; border-radius: 8px; border: 1px solid #e3ebf4; background: #ffffff; font-family: inherit; font-size: 14px; color: #1e2124; cursor: pointer; white-space: nowrap;" style-hover="border-color: #2b8ad0; color: #0d6ab8;">조건 초기화</button>
+          <button onClick="{{ onApply }}" style="{{ applyStyle }}">{{ applyLabel }}</button>
+        </div>
+      </div>
+
+      
+    </aside>
+    </sc-if>
+
+    <div style="{{ mainColStyle }}">
+      <sc-if value="{{ tabSim }}" hint-placeholder-val="{{ false }}">
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 18px 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 16px;">
+        <div>
+          <div style="font-size: 13px; color: #525c68;">{{ year }}년 인건비 · 현재 조건 그대로</div>
+          <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; color: #3c454f;">{{ totalText }}</span>
+            <span style="font-size: 13px; color: #525c68;">백만원</span>
+          </div>
+        </div>
+        <div style="border-left: 1px solid #eef2f7; padding-left: 16px;">
+          <div style="font-size: 13px; color: #0d6ab8; font-weight: 700;">바꾼 조건을 적용하면</div>
+          <sc-if value="{{ hasSim }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; align-items: baseline; gap: 6px; margin-top: 4px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; color: #0d6ab8;">{{ simTotalText }}</span>
+              <span style="font-size: 13px; color: #525c68;">백만원</span>
+            </div>
+          </sc-if>
+          <sc-if value="{{ noSim }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size: 13px; color: #6e7884; margin-top: 8px;">왼쪽에서 조건을 바꾸고 '시뮬레이션 적용'을 누르세요</div>
+          </sc-if>
+        </div>
+        <sc-if value="{{ hasSim }}" hint-placeholder-val="{{ true }}">
+          <div style="border-left: 1px solid #eef2f7; padding-left: 16px;">
+            <div style="font-size: 13px; color: #525c68;">예산 차이</div>
+            <div style="display: flex; align-items: baseline; gap: 8px; margin-top: 4px; flex-wrap: wrap;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; color: {{ simDeltaColor }};">{{ simDeltaText }}</span>
+              <span style="font-size: 13px; color: #525c68;">백만원</span>
+              <span style="padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; font-family: 'JetBrains Mono', monospace; background: {{ simBadgeBg }}; color: {{ simDeltaColor }};">{{ simDeltaPctText }}%</span>
+            </div>
+          </div>
+        </sc-if>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ tabSim }}" hint-placeholder-val="{{ false }}">
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 24px 26px;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 19px; font-weight: 700;">월별 지급액 · 분기 소계</div>
+            <div style="font-size: 13px; color: #525c68; margin-top: 2px;">{{ planSubtitle }}</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; font-size: 12px; color: #3c454f; white-space: nowrap; flex-wrap: wrap;">
+            <sc-for list="{{ stackLegend }}" as="l" hint-placeholder-count="4">
+              <div style="display: flex; align-items: center; gap: 6px;"><div style="width: 12px; height: 9px; border-radius: 2px; background: {{ l.color }};"></div><span>{{ l.name }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px;">
+          <sc-for list="{{ quarters }}" as="q" hint-placeholder-count="4">
+            <div style="border: 1px solid #e3ebf4; border-radius: 10px; background: #fbfcfe; padding: 16px 18px; display: flex; gap: 18px; align-items: stretch;">
+              <div style="flex: 0 0 128px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid #eef2f7; padding-right: 16px;">
+                <div style="display: flex; align-items: baseline; gap: 7px; white-space: nowrap;">
+                  <span style="font-size: 14px; font-weight: 700; color: #1e2124;">{{ q.label }}</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6e7884;">{{ q.months }}</span>
+                </div>
+                <div style="margin-top: 7px;">
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 23px; font-weight: 700; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; white-space: nowrap;">{{ q.text }}</span>
+                </div>
+                <div style="height: 5px; border-radius: 3px; background: #e3ebf4; overflow: hidden; margin-top: 10px;">
+                  <div style="height: 100%; border-radius: 3px; background: #0d6ab8; width: {{ q.barPct }};"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 6px; flex-wrap: wrap;">
+                  <span style="font-size: 12px; color: #525c68; white-space: nowrap;">연간 {{ q.sharePct }}</span>
+                  <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700; white-space: nowrap; color: {{ q.deltaColor }};">{{ q.deltaText }}</span>
+                </div>
+              </div>
+
+              <div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column;">
+                <div style="display: flex; align-items: flex-end; gap: 10px; height: 128px; border-bottom: 2px solid #e3ebf4;">
+                  <sc-for list="{{ q.bars }}" as="b" hint-placeholder-count="3">
+                    <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; height: 100%; gap: 5px;">
+                      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; white-space: nowrap; color: {{ b.textColor }};">{{ b.text }}</span>
+                      <div style="width: 100%; max-width: 54px; position: relative; height: {{ b.h }};">
+                        <div style="position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; justify-content: flex-end; border-radius: 4px 4px 0 0; overflow: hidden; height: {{ b.baseH }};">
+                          <sc-for list="{{ b.segs }}" as="s" hint-placeholder-count="4">
+                            <div style="width: 100%; background: {{ s.color }}; height: {{ s.h }};"></div>
+                          </sc-for>
+                        </div>
+                        <div style="position: absolute; left: -2px; right: -2px; bottom: 0; border: 1.5px dashed #0d6ab8; border-radius: 4px 4px 0 0; background: rgba(13,106,184,0.05); pointer-events: none; display: {{ b.simDisplay }}; height: {{ b.simH }};"></div>
+                      </div>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 6px;">
+                  <sc-for list="{{ q.bars }}" as="b" hint-placeholder-count="3">
+                    <div style="flex: 1; min-width: 0; text-align: center; font-size: 12px; white-space: nowrap; font-weight: {{ b.weight }}; color: {{ b.labelColor }};">{{ b.label }}</div>
+                  </sc-for>
+                </div>
+                <div style="font-size: 11px; color: #6e7884; margin-top: 6px; text-align: center;">{{ q.note }}</div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05); padding: 24px 26px;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap;">
+          <div>
+            <div style="font-size: 19px; font-weight: 700;">급여 항목별 금액과 구성비</div>
+            <div style="font-size: 13px; color: #525c68; margin-top: 2px;">{{ itemsSubtitle }}</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; font-size: 13px; color: #3c454f; white-space: nowrap;">
+            <sc-if value="{{ barsShow }}" hint-placeholder-val="{{ false }}">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="display: flex; align-items: center; gap: 6px;"><div style="width: 14px; height: 9px; border-radius: 2px; background: #b5c0cc;"></div><span>추계안</span></div>
+                <div style="display: flex; align-items: center; gap: 6px;"><div style="width: 14px; height: 9px; border-radius: 2px; background: #0d6ab8;"></div><span>조정안</span></div>
+              </div>
+            </sc-if>
+            <span style="color: #525c68;">합계 <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #1e2124;">{{ itemsTotalText }}</span></span>
+          </div>
+        </div>
+
+        <sc-if value="{{ donutShow }}" hint-placeholder-val="{{ true }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; margin-top: 16px; align-items: start;">
+            <sc-for list="{{ groupCards }}" as="g" hint-placeholder-count="4">
+              <div style="border: 1px solid #e3ebf4; border-radius: 10px; padding: 14px 16px;">
+                <div style="display: flex; align-items: center; gap: 14px;">
+                  <div style="position: relative; width: 92px; height: 92px; flex: none;">
+                    <svg viewBox="0 0 100 100" style="width: 92px; height: 92px; display: block; transform: rotate(-90deg);">
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="#eef2f7" stroke-width="12"></circle>
+                      <circle cx="50" cy="50" r="42" fill="none" stroke="{{ g.color }}" stroke-width="12" stroke-dasharray="{{ g.dash }}"></circle>
+                    </svg>
+                    <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;">{{ g.pctText }}</div>
+                  </div>
+                  <div style="min-width: 0;">
+                    <div style="display: flex; align-items: center; gap: 6px;"><div style="width: 10px; height: 10px; border-radius: 2px; background: {{ g.color }};"></div><span style="font-size: 14px; font-weight: 700;">{{ g.name }}</span></div>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums;">{{ g.sumText }} <span style="font-size: 13px; color: {{ g.diffColor }};">{{ g.diffText }}</span></div>
+                    <div style="font-size: 12px; color: #6e7884;">백만원 · 총액 대비 · {{ g.countText }}</div>
+                  </div>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px solid #f1f5f9;">
+                  <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="3">
+                    <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; gap: 10px; align-items: baseline; font-size: 12.5px;">
+                      <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ r.name }}</span>
+                      <span style="font-family: 'JetBrains Mono', monospace; font-weight: 700; font-variant-numeric: tabular-nums;">{{ r.fcText }}</span>
+                      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: {{ r.diffColor }}; text-align: right;">{{ r.diffText }}</span>
+                      <span style="font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: #6e7884; width: 44px; text-align: right;">{{ r.inPct }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="margin-top: 8px; font-size: 12px; color: #6e7884;">{{ donutNote }}</div>
+        </sc-if>
+
+        <sc-if value="{{ barsShow }}" hint-placeholder-val="{{ false }}">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); column-gap: 36px; row-gap: 15px; margin-top: 16px;">
+            <sc-for list="{{ simItems }}" as="it" hint-placeholder-count="10">
+              <div style="display: grid; grid-template-columns: 120px 1fr 100px; align-items: center; gap: 12px;">
+                <span style="font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ it.name }}</span>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  <div style="height: 9px; border-radius: 4px; background: #b5c0cc; width: {{ it.basePct }};"></div>
+                  <div style="height: 9px; border-radius: 4px; background: #0d6ab8; width: {{ it.simPct }};"></div>
+                </div>
+                <span style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 13.5px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; color: {{ it.deltaColor }};">{{ it.deltaText }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+      </div>
+      </sc-if>
+
+      <div style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05);">
+        <div style="padding: 18px 26px 14px;">
+          <div style="font-size: 19px; font-weight: 700;">월별 인건비 계산</div>
+          <div style="font-size: 13px; color: #525c68; margin-top: 2px;">단위: 백만원 · {{ year }}년 {{ xSubText }}</div>
+        </div>
+        <div style="padding: 0 26px 24px;">
+          <div style="overflow-x: auto; border: 1px solid #e3ebf4; border-radius: 8px;">
+            <table style="width: 100%; min-width: 1320px; font-size: 13px;">
+              <thead>
+                <tr style="background: #eef2f7;">
+                  <th style="position: sticky; left: 0; background: #eef2f7; text-align: left; padding: 11px 14px; font-weight: 700; border-bottom: 1px solid #e3ebf4; white-space: nowrap;">구분</th>
+                  <sc-for list="{{ items }}" as="it" hint-placeholder-count="10">
+                    <th style="text-align: right; padding: 11px 12px; font-weight: 500; color: #3c454f; border-bottom: 1px solid #e3ebf4; white-space: nowrap;">{{ it.name }}</th>
+                  </sc-for>
+                  <th style="text-align: right; padding: 11px 14px; font-weight: 700; border-bottom: 1px solid #e3ebf4; border-left: 1px solid #e3ebf4; white-space: nowrap;">합계</th>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ tableRows }}" as="row" hint-placeholder-count="12">
+                  <tr style="border-bottom: 1px solid #f1f5f9; background: {{ row.bg }};">
+                    <td style="position: sticky; left: 0; background: {{ row.bg }}; padding: 10px 14px; font-weight: 500; white-space: nowrap;">{{ row.label }}</td>
+                    <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="10">
+                      <td style="text-align: right; padding: 10px 12px; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; color: {{ c.color }}; white-space: nowrap;">{{ c.text }}<span style="font-size: 9px; margin-left: 3px; color: {{ c.arColor }};">{{ c.ar }}</span></td>
+                    </sc-for>
+                    <td style="text-align: right; padding: 10px 14px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-variant-numeric: tabular-nums; border-left: 1px solid #e3ebf4; white-space: nowrap;">{{ row.totalText }}<span style="font-size: 9px; margin-left: 3px; color: {{ row.totalArColor }};">{{ row.totalAr }}</span></td>
+                  </tr>
+                </sc-for>
+                <tr style="background: #eef4f9;">
+                  <td style="position: sticky; left: 0; background: #eef4f9; padding: 12px 14px; font-weight: 700; white-space: nowrap;">연간 합계</td>
+                  <sc-for list="{{ xTotals }}" as="it" hint-placeholder-count="10">
+                    <td style="text-align: right; padding: 12px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap;">{{ it.text }}<span style="font-size: 9px; margin-left: 3px; color: {{ it.arColor }};">{{ it.ar }}</span></td>
+                  </sc-for>
+                  <td style="text-align: right; padding: 12px 14px; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-variant-numeric: tabular-nums; color: #0d6ab8; border-left: 1px solid #e3ebf4; white-space: nowrap;">{{ xGrandText }}<span style="font-size: 9px; margin-left: 3px; color: {{ xGrandArColor }};">{{ xGrandAr }}</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ tabBase }}" hint-placeholder-val="{{ true }}">
+      <details style="background: #ffffff; border: 1px solid #e3ebf4; border-radius: 12px; box-shadow: 0 2px 10px rgba(13,58,102,0.05);">
+        <summary style="display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 18px 26px; cursor: pointer;">
+          <div>
+            <div style="font-size: 19px; font-weight: 700;">기본급 산출 근거 (직급·호봉별 인원 수)</div>
+            <div style="font-size: 13px; color: #525c68; margin-top: 2px;">직급 × 호봉별 인원에 봉급표 봉급액을 적용해 12개월 합산 · 인원이 있는 호봉만 표시 · 클릭하여 펼치기</div>
+          </div>
+          <div style="display: flex; gap: 22px; flex-wrap: wrap; align-items: flex-start;">
+            <div>
+              <div style="font-size: 12px; color: #6e7884;">연간 기본급 · 보정 전 산식</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums;">{{ baseSalaryText }}</div>
+            </div>
+            <div>
+              <div style="font-size: 12px; color: #6e7884;">정기승급 소요 · 추계안에 포함</div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums; color: #0d6ab8;">+{{ stepAnnualText }}</div>
+            </div>
+            <span style="padding: 4px 12px; border-radius: 999px; border: 1px solid #e3ebf4; background: #f8fafc; color: #3c454f; font-size: 13px; white-space: nowrap; margin-top: 4px;">펼치기 / 접기</span>
+          </div>
+        </summary>
+        <div style="overflow-x: auto; margin: 0 26px 24px; border: 1px solid #e3ebf4; border-radius: 8px;">
+          <table style="width: 100%; min-width: 1100px; font-size: 12.5px;">
+            <thead>
+              <tr style="background: #eef2f7;">
+                <th rowSpan="2" style="padding: 9px 12px; font-weight: 700; border-bottom: 1px solid #e3ebf4; border-right: 1px solid #e3ebf4; white-space: nowrap;">호봉</th>
+                <sc-for list="{{ rpGradeHeads }}" as="h" hint-placeholder-count="7">
+                  <th colSpan="2" style="padding: 9px 10px 4px; font-weight: 700; text-align: center; border-right: 1px solid #e3ebf4; white-space: nowrap;">{{ h }}</th>
+                </sc-for>
+                <th rowSpan="2" style="padding: 9px 12px; font-weight: 700; text-align: right; border-bottom: 1px solid #e3ebf4; white-space: nowrap;">인원 계</th>
+              </tr>
+              <tr style="background: #eef2f7;">
+                <sc-for list="{{ rpGradeHeads }}" as="h" hint-placeholder-count="7">
+                  <th style="padding: 3px 8px 8px; font-weight: 500; font-size: 11.5px; color: #525c68; text-align: right; border-bottom: 1px solid #e3ebf4; white-space: nowrap;">인원</th>
+                  <th style="padding: 3px 10px 8px; font-weight: 500; font-size: 11.5px; color: #525c68; text-align: right; border-bottom: 1px solid #e3ebf4; border-right: 1px solid #e3ebf4; white-space: nowrap;">월 봉급액(원)</th>
+                </sc-for>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{ rpStepRows }}" as="r" hint-placeholder-count="20">
+                <tr style="border-bottom: 1px solid #f1f5f9;" style-hover="background: #f8fafc;">
+                  <td style="padding: 6px 12px; text-align: center; white-space: nowrap; border-right: 1px solid #e3ebf4; color: #3c454f;">{{ r.step }}</td>
+                  <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="7">
+                    <td style="padding: 6px 8px; text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; font-weight: 700; color: {{ c.color }};">{{ c.n }}</td>
+                    <td style="padding: 6px 10px; text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; color: {{ c.color }}; border-right: 1px solid #eef2f7;">{{ c.pay }}</td>
+                  </sc-for>
+                  <td style="padding: 6px 12px; text-align: right; font-family: 'JetBrains Mono', monospace; font-variant-numeric: tabular-nums; font-weight: 700;">{{ r.total }}</td>
+                </tr>
+              </sc-for>
+              <tr style="background: #eef4f9; border-top: 1px solid #e3ebf4;">
+                <td style="padding: 9px 12px; text-align: center; font-weight: 700; border-right: 1px solid #e3ebf4;">인원 계</td>
+                <sc-for list="{{ rpStepTotals }}" as="t" hint-placeholder-count="7">
+                  <td style="padding: 9px 8px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ t }}</td>
+                  <td style="padding: 9px 10px; border-right: 1px solid #e3ebf4;"></td>
+                </sc-for>
+                <td style="padding: 9px 12px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700;">{{ headcountText }}</td>
+              </tr>
+              <tr style="background: #eef4f9;">
+                <td style="padding: 9px 12px; text-align: center; font-weight: 700; border-right: 1px solid #e3ebf4; white-space: nowrap;">연 기본급(백만원)</td>
+                <sc-for list="{{ rpGradeAnnual }}" as="a" hint-placeholder-count="7">
+                  <td colSpan="2" style="padding: 9px 10px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; border-right: 1px solid #e3ebf4;">{{ a }}</td>
+                </sc-for>
+                <td style="padding: 9px 12px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 700; color: #0d6ab8;">{{ baseSalaryText }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </details>
+      </sc-if>
+    </div>
+  </main>
+
+  <footer style="background: #eceff3; border-top: 1px solid #e3ebf4;">
+    <div style="display: flex; height: 3px;">
+      <div style="flex: 1; background: #0d6ab8;"></div>
+      <div style="flex: 1; background: #83bd3f;"></div>
+      <div style="flex: 1; background: #f28c28;"></div>
+    </div>
+    <div style="width: min(1780px, 100% - 40px); margin: 0 auto; padding: 24px 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #3c454f;">
+        <span style="font-size: 15px; font-weight: 700; color: #1e2124;">전북특별자치도교육청 인건비 예산 추계 시스템</span>
+        <span>본 화면의 추계액은 교육비특별회계 예산 편성 전 내부 검토 자료이며 확정 예산과 다를 수 있습니다.</span>
+        <span style="font-family: 'JetBrains Mono', monospace;">문의 재정과 · 063-000-0000</span>
+      </div>
+      <div style="height: 56px; padding: 0 20px; border-radius: 8px; background: #ffffff; border: 1px solid #e3ebf4; display: flex; align-items: center; gap: 12px;">
+        <div style="display: flex; gap: 3px;">
+          <div style="width: 7px; height: 22px; border-radius: 2px; background: #0d6ab8;"></div>
+          <div style="width: 7px; height: 22px; border-radius: 2px; background: #83bd3f;"></div>
+          <div style="width: 7px; height: 22px; border-radius: 2px; background: #f28c28;"></div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-size: 13px; color: #525c68;">운영기관</span>
+          <span style="font-size: 15px; font-weight: 700;">전북특별자치도교육청 재정과</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <sc-if value="{{ rpOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ onRpClose }}" style="position: fixed; inset: 0; background: rgba(30,33,36,0.45); display: flex; align-items: center; justify-content: center; z-index: 50; padding: 20px;">
+      <div onClick="{{ stopProp }}" style="width: min(440px, 100%); background: #ffffff; border-radius: 12px; box-shadow: 0 12px 40px rgba(13,58,102,0.25); padding: 22px 24px;">
+        <div style="font-size: 18px; font-weight: 700;">보고서 다운로드</div>
+        <div style="font-size: 13px; color: #525c68; margin-top: 3px;">보고서에 담을 값을 고르세요. 인쇄 창에서 'PDF로 저장'을 선택하면 됩니다.</div>
+        <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px;">
+          <sc-for list="{{ rpOptions }}" as="o" hint-placeholder-count="3">
+            <button onClick="{{ o.onPick }}" style="{{ o.style }}">
+              <span style="width: 16px; height: 16px; border-radius: 50%; border: 2px solid {{ o.ring }}; display: flex; align-items: center; justify-content: center; flex: none;"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{ o.dot }};"></span></span>
+              <span style="display: flex; flex-direction: column; gap: 2px; text-align: left;">
+                <span style="font-size: 14px; font-weight: 700; color: #1e2124;">{{ o.title }}</span>
+                <span style="font-size: 12px; color: #525c68;">{{ o.desc }}</span>
+              </span>
+            </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ rpNoSimWarn }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: 10px; font-size: 12px; color: #9e6a00;">시뮬레이션을 아직 적용하지 않아 조정안이 추계안과 같습니다.</div>
+        </sc-if>
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px;">
+          <button onClick="{{ onRpClose }}" style="height: 38px; padding: 0 14px; border-radius: 8px; border: 1px solid #e3ebf4; background: #ffffff; font-family: inherit; font-size: 14px; color: #3c454f; cursor: pointer;" style-hover="background: #f4f7fa;">취소</button>
+          <button onClick="{{ onRpGo }}" style="height: 38px; padding: 0 16px; border-radius: 8px; border: 1px solid #0d6ab8; background: #0d6ab8; font-family: inherit; font-size: 14px; font-weight: 700; color: #ffffff; cursor: pointer;" style-hover="background: #2b8ad0; border-color: #2b8ad0;">다운로드</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+<div data-print-report="" style="display: none; background: #ffffff; color: #111111; font-family: 'Noto Sans KR', sans-serif; font-size: 9.5pt; line-height: 1.45;">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; border-bottom: 1.5pt solid #111111; padding-bottom: 6pt;">
+    <div>
+      <div style="font-size: 9pt; color: #444444;">전북특별자치도교육청 · 교육비특별회계</div>
+      <div style="font-size: 17pt; font-weight: 700; letter-spacing: -0.02em;">{{ year }}년 지방공무원 인건비 산출 보고서</div>
+      <div style="font-size: 10pt; font-weight: 700; margin-top: 2pt;">{{ rpModeLabel }}</div>
+    </div>
+    <div style="text-align: right; font-size: 8.5pt; color: #444444;">
+      <div>작성일 {{ rpDate }}</div>
+      <div>표본 데이터 · 가정값 포함</div>
+    </div>
+  </div>
+
+  <div style="font-size: 11pt; font-weight: 700; margin: 12pt 0 5pt;">1. 요약</div>
+  <sc-if value="{{ rpOne }}" hint-placeholder-val="{{ false }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <tr style="background: #eeeeee;">
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">{{ rpOneLabel }}</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">전년({{ prevYear }}년)</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">전년 대비</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">기준 정원</th>
+    </tr>
+    <tr>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right; font-weight: 700;">{{ rpOneTotalText }} 백만원</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ prevTotalText }} 백만원</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ rpOneYoyText }} 백만원 ({{ rpOneYoyPct }}%)</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ headcountText }}명</td>
+    </tr>
+  </table>
+  </sc-if>
+  <sc-if value="{{ rpCmp }}" hint-placeholder-val="{{ true }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <tr style="background: #eeeeee;">
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">추계안</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">조정안(시뮬레이션 적용)</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">조정 차이</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">전년({{ prevYear }}년)</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">전년 대비(조정안)</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">기준 정원</th>
+    </tr>
+    <tr>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right; font-weight: 700;">{{ totalText }} 백만원</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right; font-weight: 700;">{{ rpSimTotalText }} 백만원</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ rpDiffText }} 백만원 ({{ rpDiffPct }}%)</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ prevTotalText }} 백만원</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ rpYoyText }} 백만원 ({{ rpYoyPct }}%)</td>
+      <td style="border: 0.5pt solid #888888; padding: 5pt 6pt; text-align: right;">{{ headcountText }}명</td>
+    </tr>
+  </table>
+  </sc-if>
+
+  <div style="font-size: 11pt; font-weight: 700; margin: 12pt 0 5pt;">2. 적용 조건</div>
+  <sc-if value="{{ rpOne }}" hint-placeholder-val="{{ false }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <sc-for list="{{ rpConds }}" as="c" hint-placeholder-count="6">
+      <tr>
+        <th style="width: 22%; border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: left; background: #f6f6f6; font-weight: 500;">{{ c.k }}</th>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt;">{{ c.one }}</td>
+      </tr>
+    </sc-for>
+  </table>
+  </sc-if>
+  <sc-if value="{{ rpCmp }}" hint-placeholder-val="{{ true }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <tr style="background: #eeeeee;">
+      <th style="width: 16%; border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">구분</th>
+      <th style="width: 38%; border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">추계안 · 시뮬레이션 미적용</th>
+      <th style="width: 38%; border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">조정안 · 시뮬레이션 적용</th>
+      <th style="width: 8%; border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">비고</th>
+    </tr>
+    <sc-for list="{{ rpConds }}" as="c" hint-placeholder-count="6">
+      <tr>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: left; background: #f6f6f6; font-weight: 500;">{{ c.k }}</th>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; color: #333333;">{{ c.b }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; font-weight: {{ c.weight }};">{{ c.v }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center; font-weight: 700;">{{ c.mark }}</td>
+      </tr>
+    </sc-for>
+  </table>
+  </sc-if>
+
+  <div data-print-break="" style="font-size: 11pt; font-weight: 700; margin: 0 0 5pt;">3. 급여항목별 내역 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">단위: 백만원</span></div>
+  <sc-if value="{{ rpOne }}" hint-placeholder-val="{{ false }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <tr style="background: #eeeeee;">
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">분류</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">항목</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">{{ rpOneLabel }}</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">구성비</th>
+    </tr>
+    <sc-for list="{{ rpItems }}" as="r" hint-placeholder-count="14">
+      <tr>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ r.group }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ r.name }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.one }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.oneShare }}</td>
+      </tr>
+    </sc-for>
+    <tr style="background: #eeeeee; font-weight: 700;">
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt;" colSpan="2">합계</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ rpOneTotalText }}</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">100.0%</td>
+    </tr>
+  </table>
+  </sc-if>
+  <sc-if value="{{ rpCmp }}" hint-placeholder-val="{{ true }}">
+  <table style="width: 100%; border: 0.75pt solid #111111;">
+    <tr style="background: #eeeeee;">
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">분류</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">항목</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">추계안</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">조정안</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">차이</th>
+      <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">구성비</th>
+    </tr>
+    <sc-for list="{{ rpItems }}" as="r" hint-placeholder-count="15">
+      <tr>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ r.group }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ r.name }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.base }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.sim }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.diff }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.share }}</td>
+      </tr>
+    </sc-for>
+    <tr style="background: #eeeeee; font-weight: 700;">
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt;" colSpan="2">합계</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ totalText }}</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ rpSimTotalText }}</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ rpDiffText }}</td>
+      <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">100.0%</td>
+    </tr>
+  </table>
+  </sc-if>
+
+  <div data-print-keep="">
+    <div style="font-size: 11pt; font-weight: 700; margin: 12pt 0 5pt;">3-1. 과거 실적 보정 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">보정계수 = 해당 연도 실제 집행액 ÷ 같은 산식 계산값 · 3년 평균 계수 적용 · 표본 실적(가정값)</span></div>
+    <table style="width: 100%; border: 0.75pt solid #111111;">
+      <tr style="background: #eeeeee;">
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">분류</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">2023</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">2024</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">2025</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">평균 계수</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">보정 전(백만원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">보정 후(백만원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">차이</th>
+      </tr>
+      <sc-for list="{{ calRows }}" as="r" hint-placeholder-count="3">
+        <tr>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ r.name }}</td>
+          <sc-for list="{{ r.yrs }}" as="y" hint-placeholder-count="3">
+            <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ y }}</td>
+          </sc-for>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right; font-weight: 700;">{{ r.avg }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.raw }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.cal }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.diff }}</td>
+        </tr>
+      </sc-for>
+      <tr style="background: #eeeeee; font-weight: 700;">
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt;" colSpan="4">합계</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ calAvgAll }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ rawTotalText }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ calTotalText }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ calDiffText }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div data-print-break="" style="font-size: 11pt; font-weight: 700; margin: 0 0 5pt;">4. 월별 인건비 계산 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">{{ rpBasisLabel }} 기준 · 단위: 백만원<sc-if value="{{ rpCmp }}" hint-placeholder-val="{{ true }}"> · <span style="color: #de3412;">▲</span> 추계안보다 증가 · <span style="color: #228738;">▼</span> 감소</sc-if></span></div>
+  <table style="width: 100%; border: 0.75pt solid #111111; font-size: 8.5pt;">
+    <tr style="background: #eeeeee;">
+      <th style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: left;">항목</th>
+      <sc-for list="{{ rpMonthHeads }}" as="h" hint-placeholder-count="12">
+        <th style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">{{ h }}</th>
+      </sc-for>
+      <th style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">연간</th>
+    </tr>
+    <sc-for list="{{ rpCross }}" as="r" hint-placeholder-count="15">
+      <tr style="font-weight: {{ r.weight }}; background: {{ r.bg }};">
+        <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; white-space: nowrap;">{{ r.name }}</td>
+        <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="12">
+          <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: right; white-space: nowrap;">{{ c.t }}<span style="font-size: 6.5pt; margin-left: 1.5pt; color: {{ c.col }};">{{ c.ar }}</span></td>
+        </sc-for>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: right; font-weight: 700; white-space: nowrap;">{{ r.total }}<span style="font-size: 6.5pt; margin-left: 1.5pt; color: {{ r.totalCol }};">{{ r.totalAr }}</span></td>
+      </tr>
+    </sc-for>
+  </table>
+
+  <table data-print-break="" style="width: 100%; border: 0.75pt solid #111111; font-size: 8pt;">
+    <caption style="caption-side: top; text-align: left; font-size: 11pt; font-weight: 700; padding: 0 0 5pt;">5. 직급·호봉별 인원 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">인원: 명 · 봉급액: 월 원 · 인원이 있는 호봉만 표시</span></caption>
+    <thead>
+    <tr style="background: #eeeeee;">
+      <th rowSpan="2" style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">호봉</th>
+      <sc-for list="{{ rpGradeHeads }}" as="h" hint-placeholder-count="7">
+        <th colSpan="2" style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">{{ h }}</th>
+      </sc-for>
+      <th rowSpan="2" style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">인원 계</th>
+    </tr>
+    <tr style="background: #eeeeee;">
+      <sc-for list="{{ rpGradeHeads }}" as="h" hint-placeholder-count="7">
+        <th style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: center; font-weight: 500;">인원</th>
+        <th style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: center; font-weight: 500;">봉급액</th>
+      </sc-for>
+    </tr>
+    </thead>
+    <tbody>
+    <sc-for list="{{ rpStepRows }}" as="r" hint-placeholder-count="30">
+      <tr>
+        <td style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: center; white-space: nowrap;">{{ r.step }}</td>
+        <sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="7">
+          <td style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: right; color: {{ c.color }};">{{ c.n }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: right; color: {{ c.color }};">{{ c.pay }}</td>
+        </sc-for>
+        <td style="border: 0.5pt solid #888888; padding: 2pt 4pt; text-align: right; font-weight: 700;">{{ r.total }}</td>
+      </tr>
+    </sc-for>
+    <tr style="background: #eeeeee; font-weight: 700;">
+      <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: center;">합계</td>
+      <sc-for list="{{ rpStepTotals }}" as="t" hint-placeholder-count="7">
+        <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: right;">{{ t }}</td>
+        <td style="border: 0.5pt solid #888888; padding: 3pt 4pt;"></td>
+      </sc-for>
+      <td style="border: 0.5pt solid #888888; padding: 3pt 4pt; text-align: right;">{{ headcountText }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <sc-if value="{{ rpShowPromo }}" hint-placeholder-val="{{ true }}">
+  <div data-print-break="">
+    <div style="font-size: 11pt; font-weight: 700; margin: 0 0 5pt;">6. 진급 산출 근거 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">승진 전 호봉 분포 가중평균 · 승진 시 1호봉 감액 재획정</span></div>
+    <table style="width: 100%; border: 0.75pt solid #111111;">
+      <tr style="background: #eeeeee;">
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">구분</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">승진 전 호봉 분포(가정)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">1인 월 차액(원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">진급 인원</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">연간 반영액(백만원)</th>
+      </tr>
+      <sc-for list="{{ rpPromo }}" as="p" hint-placeholder-count="6">
+        <tr>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: center;">{{ p.label }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt;">{{ p.dist }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ p.gap }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ p.n }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ p.annual }}</td>
+        </tr>
+      </sc-for>
+    </table>
+  </div>
+
+  </sc-if>
+
+  <div data-print-keep="">
+    <div style="font-size: 11pt; font-weight: 700; margin: 12pt 0 5pt;">{{ rpPsNo }}. 성과상여금 산출 근거 <span style="font-size: 8.5pt; font-weight: 400; color: #444444;">{{ rpBasisLabel }} 기준 · 지급 대상 {{ psTargetText }}명 · 3월 일시 지급</span></div>
+    <table style="width: 100%; border: 0.75pt solid #111111;">
+      <tr style="background: #eeeeee;">
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">등급</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">인원 비율</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">인원</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">지급률</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">금액(백만원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">재원 비중</th>
+      </tr>
+      <sc-for list="{{ rpPs }}" as="g" hint-placeholder-count="3">
+        <tr>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: center;">{{ g.name }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ g.headPct }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ g.nText }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ g.rateText }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ g.amtText }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ g.sharePct }}</td>
+        </tr>
+      </sc-for>
+    </table>
+    <div style="font-size: 9pt; margin: 6pt 0 4pt; color: #333333;">산식: 직급별 지급 대상 인원(정원의 98%) × 지급기준액 × 평균 지급률 {{ psBaseAvgText }}% · 2027년 지급기준액 = 2026년 × (1 + 보수 인상률 {{ rpPsRaiseText }}%) · 등급 비율 S 20·A 40·B 30·C 10%, 지급률 172.5·125·85·0%는 지침 고정값</div>
+    <table style="width: 100%; border: 0.75pt solid #111111;">
+      <tr style="background: #eeeeee;">
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">직급</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">지급 대상</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">2026년 지급기준액(천원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">2027년 지급기준액(천원)</th>
+        <th style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">금액(백만원)</th>
+      </tr>
+      <sc-for list="{{ rpPsStd }}" as="r" hint-placeholder-count="7">
+        <tr>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: center;">{{ r.name }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.nText }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.std26 }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.std27 }}</td>
+          <td style="border: 0.5pt solid #888888; padding: 3pt 6pt; text-align: right;">{{ r.amt }}</td>
+        </tr>
+      </sc-for>
+      <tr style="background: #eeeeee; font-weight: 700;">
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: center;">합계</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ psTargetText }}명</td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt;" colSpan="2"></td>
+        <td style="border: 0.5pt solid #888888; padding: 4pt 6pt; text-align: right;">{{ rpPsFundText }}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div data-print-keep="">
+    <div style="font-size: 11pt; font-weight: 700; margin: 12pt 0 5pt;">{{ rpLastNo }}. 산출 기준 및 가정</div>
+    <div style="display: flex; flex-direction: column; gap: 2pt; font-size: 9pt;">
+      <div>· 기준 정원 {{ headcountText }}명(3급~9급), 직급 × 호봉별 인원 분포는 가정값입니다.</div>
+      <div>· 봉급표는 대시보드에 수록된 일반직 봉급표를 적용했으며, 적용 연도 확인이 필요합니다.</div>
+      <div>· 기본 인상률 {{ baseRaiseText }}% 기준 추계안이며, 조정안은 적용 조건의 인상률 차이만큼 반영합니다.</div>
+      <div>· 신규 채용은 연중 채용 가중 75%, 휴직은 무급 60% 감액으로 반영합니다.</div>
+      <div>· 진급 승진 전 호봉 분포, 성과상여금 2026년 직급별 지급기준액은 지침 수령 전 가정값입니다.</div>
+      <div>· 월별 배분은 법령상 지급 시기(정근수당 1·7월, 명절휴가비 2·9월, 성과상여금 3월, 연가보상비 12월)를 따릅니다.</div>
+      <div>· 수당별 추계액은 표본 데이터이며 실제 지급 실적으로 교체가 필요합니다.</div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const even = () => Array(12).fill(1 / 12);
+const spread = (idxs) => { const a = Array(12).fill(0); idxs.forEach(i => { a[i] = 1 / idxs.length; }); return a; };
+
+const OT_W = [0.072, 0.070, 0.082, 0.084, 0.086, 0.090, 0.084, 0.080, 0.088, 0.092, 0.088, 0.084];
+
+const PAY_COLS = ['1급', '2급', '3급', '4급', '5급', '6급', '7급', '8급', '9급'];
+const PAY = [
+  [4656100, 4191600, 3781700, 3241200, 2896400, 2389500, 2317100, 2162100, 2133000],
+  [4819300, 4347100, 3921600, 3373500, 3013400, 2500700, 2367900, 2195700, 2147600],
+  [4986600, 4504700, 4065700, 3508000, 3135000, 2615200, 2423800, 2233800, 2168000],
+  [5157700, 4663700, 4210800, 3645700, 3261300, 2732400, 2485200, 2276600, 2194000],
+  [5333000, 4825100, 4358300, 3785200, 3390900, 2853100, 2567100, 2331700, 2226100],
+  [5510400, 4986500, 4507200, 3926200, 3523000, 2977100, 2682600, 2412900, 2264600],
+  [5690400, 5150200, 4658000, 4068300, 3657300, 3101500, 2798700, 2519600, 2309900],
+  [5871900, 5313200, 4809000, 4211100, 3793200, 3226200, 2915800, 2622400, 2367500],
+  [6056100, 5478200, 4961400, 4354500, 3929600, 3351300, 3027100, 2720300, 2456700],
+  [6241300, 5642500, 5113600, 4497700, 4066800, 3468700, 3133300, 2813000, 2542700],
+  [6426000, 5807700, 5266200, 4642100, 4195300, 3580000, 3233400, 2902700, 2624400],
+  [6617100, 5978600, 5424400, 4778100, 4319000, 3689600, 3331900, 2990300, 2705900],
+  [6809200, 6150500, 5571200, 4905100, 4436400, 3792700, 3425300, 3074500, 2783900],
+  [7001800, 6306200, 5707600, 5023800, 4545900, 3890000, 3514500, 3155100, 2859800],
+  [7170100, 6449600, 5833400, 5135500, 4649400, 3983600, 3599900, 3232400, 2932300],
+  [7319600, 6581000, 5950500, 5240900, 4746800, 4071300, 3680600, 3307100, 3002300],
+  [7452100, 6702000, 6059400, 5338700, 4838400, 4154900, 3758100, 3376800, 3070800],
+  [7570100, 6812700, 6160700, 5430100, 4924900, 4234100, 3832100, 3444300, 3134500],
+  [7675800, 6914900, 6254300, 5515500, 5006300, 4309100, 3902000, 3509300, 3197300],
+  [7770600, 7008100, 6342100, 5595300, 5082700, 4379600, 3968400, 3571100, 3257000],
+  [7857800, 7093400, 6423300, 5669800, 5154500, 4447600, 4031800, 3630200, 3313400],
+  [7935600, 7171600, 6498500, 5739700, 5222000, 4511500, 4091600, 3686900, 3367600],
+  [8001400, 7243100, 6567800, 5805400, 5285600, 4571300, 4149600, 3740800, 3419200],
+  [null, 7301700, 6632900, 5867300, 5345200, 4628500, 4204500, 3792900, 3468800],
+  [null, 7357600, 6685800, 5923800, 5401500, 4682800, 4256500, 3842300, 3516000],
+  [null, null, 6736700, 5971800, 5454500, 4734100, 4306500, 3890300, 3558700],
+  [null, null, 6783800, 6015900, 5498400, 4782800, 4348700, 3930200, 3595600],
+  [null, null, null, 6058300, 5540700, 4823700, 4388000, 3968700, 3631000],
+  [null, null, null, null, 5579500, 4861900, 4426100, 4005100, 3665100],
+  [null, null, null, null, 5617200, 4899800, 4462400, 4040300, 3698400],
+  [null, null, null, null, null, 4934800, 4496500, 4074600, 3731100],
+  [null, null, null, null, null, 4967800, null, null, null]
+];
+const payAt = (col, step) => {
+  let i = Math.max(1, Math.min(step, PAY.length)) - 1;
+  while (i >= 0 && PAY[i][col] == null) i--;
+  return PAY[i][col];
+};
+const topStep = col => { let i = PAY.length; while (i > 1 && PAY[i - 1][col] == null) i--; return i; };
+
+const gapAt = (col, step) => {
+  const top = topStep(col);
+  return step >= top
+    ? payAt(col, top) - payAt(col, top - 1)
+    : payAt(col, step + 1) - payAt(col, step);
+};
+
+const DIST = [
+  { col: 2, counts: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 1, 1, 1, 0,0,0,0,0,0] },
+  { col: 3, counts: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 2, 3, 3, 3, 2, 2, 0,0,0,0,0] },
+  { col: 4, counts: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 6, 10, 14, 18, 20, 22, 20, 18, 14, 12, 11, 0, 0] },
+  { col: 5, counts: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 8, 14, 22, 30, 38, 44, 50, 52, 52, 48, 44, 36, 28, 22, 16, 10, 6] },
+  { col: 6, counts: [0,0,0,0,0,0,0, 14, 26, 38, 50, 60, 68, 74, 76, 74, 68, 60, 52, 44, 34, 24, 12, 6, 0,0,0,0,0,0,0,0] },
+  { col: 7, counts: [0, 0, 58, 92, 118, 112, 88, 80, 62, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] },
+  { col: 8, counts: [118, 104, 75, 40, 20, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0] }
+];
+
+const STAFF = DIST.map(g => {
+  const n = g.counts.reduce((a, b) => a + b, 0);
+  const monthly = g.counts.reduce((s, c, i) => s + c * payAt(g.col, i + 1), 0);
+  const stepUp = g.counts.reduce((s, c, i) => s + c * gapAt(g.col, i + 1), 0);
+  const avgStep = n ? g.counts.reduce((s, c, i) => s + c * (i + 1), 0) / n : 0;
+  return { col: g.col, counts: g.counts, n, monthly, stepUp, avgStep, step: Math.round(avgStep) };
+});
+const PROMOTABLE = STAFF.filter(g => g.col > 2);
+// 승진 대상자 기존 호봉 분포(가정값) · key = 승진 전 직급 col (3=4급 … 8=9급)
+const PROMO_DIST = {
+  3: [{ step: 22, share: 0.3 }, { step: 23, share: 0.4 }, { step: 24, share: 0.3 }],
+  4: [{ step: 20, share: 0.25 }, { step: 21, share: 0.45 }, { step: 22, share: 0.3 }],
+  5: [{ step: 17, share: 0.25 }, { step: 18, share: 0.45 }, { step: 19, share: 0.3 }],
+  6: [{ step: 10, share: 0.25 }, { step: 11, share: 0.45 }, { step: 12, share: 0.3 }],
+  7: [{ step: 5, share: 0.25 }, { step: 6, share: 0.45 }, { step: 7, share: 0.3 }],
+  8: [{ step: 3, share: 0.2 }, { step: 4, share: 0.5 }, { step: 5, share: 0.3 }]
+};
+// 호봉 재획정: 승진 후 호봉 = 승진 전 호봉 - 1
+const promoGap = g => (PROMO_DIST[g.col] || []).reduce((s, d) =>
+  s + d.share * (payAt(g.col - 1, Math.max(1, d.step - 1)) - payAt(g.col, d.step)), 0);
+const BASE_SALARY = Math.round(STAFF.reduce((s, g) => s + g.monthly * 12, 0) / 1e6);
+const STEP_ANNUAL = Math.round(STAFF.reduce((s, g) => s + g.stepUp * 12, 0) / 1e6);
+
+const PS_FIX = [
+  { name: 'S', share: 20, rate: 172.5, color: '#0d6ab8' },
+  { name: 'A', share: 40, rate: 125, color: '#4aa3dc' },
+  { name: 'B', share: 30, rate: 85, color: '#7cc0e6' },
+  { name: 'C', share: 10, rate: 0, color: '#b5c0cc' }
+];
+const PS_AVG_RATE = PS_FIX.reduce((s, g) => s + g.share * g.rate, 0) / 100;
+const PS_TARGET = 0.98;
+// 직급별 성과상여금 지급기준액(2026년, 천원, 가정값) · 2027년 = 2026년 × (1 + 보수 인상률) · key = col (2=3급 … 8=9급)
+const PS_STD = { 2: 5600, 3: 4900, 4: 4300, 5: 3800, 6: 3500, 7: 3200, 8: 3000 };
+const psFund = (std, promo) => {
+  let s = STAFF.reduce((a, g) => a + g.n * std[g.col], 0);
+  if (promo) PROMOTABLE.forEach(g => { s += (promo[g.col] || 0) * (std[g.col - 1] - std[g.col]); });
+  return s * 1000 * PS_AVG_RATE / 100 * PS_TARGET / 1e6;
+};
+const psStdAt = raise => { const o = {}; Object.keys(PS_STD).forEach(c => { o[c] = PS_STD[c] * (1 + raise / 100); }); return o; };
+const PS_FORMULA = psFund(psStdAt(3.5));
+
+const ITEMS = [
+  { name: '기본급',        base: BASE_SALARY, w: even(),      sens: 1,    hc: 1,    color: '#0d6ab8' },
+  { name: '직급보조비',    base: 4530,  w: even(),           sens: 0,    hc: 1,    color: '#7cc0e6' },
+  { name: '정액급식비',    base: 3740,  w: even(),           sens: 0,    hc: 1,    color: '#7cc0e6' },
+  { name: '정근수당',      base: 7250,  w: spread([0, 6]),   sens: 1,    hc: 0.9,  color: '#7cc0e6' },
+  { name: '정근수당 가산금', base: 2350, w: even(),          sens: 0,    hc: 0.9,  color: '#7cc0e6' },
+  { name: '명절휴가비',    base: 9080,  w: spread([1, 8]),   sens: 1,    hc: 1,    color: '#7cc0e6' },
+  { name: '가족수당',      base: 1680,  w: even(),           sens: 0,    hc: 1,    color: '#7cc0e6' },
+  { name: '관리업무수당',  base: 890,   w: even(),           sens: 1,    hc: 0.3,  color: '#7cc0e6' },
+  { name: '대우공무원수당', base: 1250, w: even(),           sens: 1,    hc: 0.5,  color: '#7cc0e6' },
+  { name: '학교근무수당',  base: 1060,  w: even(),           sens: 0,    hc: 1,    color: '#7cc0e6' },
+  { name: '시간외근무수당', base: 11430, w: OT_W,            sens: 0.8,  hc: 1,    color: '#83bd3f' },
+  { name: '야간·휴일근무수당', base: 1210, w: OT_W,          sens: 0.8,  hc: 1,    color: '#83bd3f' },
+  { name: '성과상여금',    base: Math.round(PS_FORMULA), w: spread([2]), sens: 0, hc: 1, color: '#83bd3f' },
+  { name: '연가보상비',    base: 2850,  w: spread([11]),     sens: 0.8,  hc: 0.8,  color: '#83bd3f' }
+];
+
+const MONTHS = ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'];
+const STACK_GROUPS = [
+  { name: '기본급', color: '#0d6ab8', keys: ['기본급'] },
+  { name: '고정수당', color: '#7cc0e6', keys: ['직급보조비', '정액급식비', '정근수당', '정근수당 가산금', '명절휴가비', '가족수당', '관리업무수당', '대우공무원수당', '학교근무수당'] },
+  { name: '변동수당', color: '#83bd3f', keys: ['시간외근무수당', '야간·휴일근무수당', '성과상여금', '연가보상비'] }
+];
+
+// 보정계수 = 실제 집행액 ÷ 같은 산식 계산값 (2023~2025, 표본 가정값)
+const CAL = [
+  { group: '기본급', yrs: [1.004, 0.998, 1.003] },
+  { group: '고정수당', yrs: [1.012, 1.009, 1.015] },
+  { group: '변동수당', yrs: [1.041, 1.028, 1.036] }
+];
+const calAvg = c => c.yrs.reduce((a, b) => a + b, 0) / c.yrs.length;
+const calCoef = name => {
+  const g = STACK_GROUPS.find(x => x.keys.indexOf(name) >= 0);
+  const c = g && CAL.find(x => x.group === g.name);
+  return c ? calAvg(c) : 1;
+};
+const SHORT = ['1','2','3','4','5','6','7','8','9','10','11','12'];
+// 2027년 월별 인원 변동(가정값) · 채용 3·9월, 퇴직 2월말(명퇴)·6월말·12월말(정년)
+const HC_HIRE = [0,0,40,0,0,0,0,0,20,0,0,0];
+const HC_RET  = [0,12,0,0,0,24,0,0,0,0,0,22];
+const HC_RET_TYPE = { 1: '명예퇴직', 5: '정년퇴직', 11: '정년퇴직' };
+// 월말 휴직자(육아휴직 포함, 가정값) · 3·9월 학기 시작에 증가
+const HC_LEAVE = [152,152,168,166,163,161,158,156,172,170,165,163];
+const HC_HIRE_W = HC_HIRE.map(v => v / 60), HC_RET_W = HC_RET.map(v => v / 58);
+const OT_RAW = 11430, OT_PREV = 10920;
+const PS_RAW = Math.round(PS_FORMULA), PS_PREV = Math.round(PS_RAW / 1.028);
+const HEADCOUNT = STAFF.reduce((s, g) => s + g.n, 0);
+const ACC_META = [
+  { year: 2023, growth: 1.049, err: 0.0059 },
+  { year: 2024, growth: 1.046, err: 0.0024 },
+  { year: 2025, growth: 1.0445, err: -0.0033 }
+];
+const BASE_RAISE = 3.5;
+// 항목별 기초값은 인상률 3.0% 기준 자료 → 기본 인상률과의 차이를 민감도만큼 반영
+const DATA_RAISE = 3.0;
+ITEMS.forEach(it => { it.base = it.base * (1 + (BASE_RAISE - DATA_RAISE) / 100 * it.sens); });
+const OT_BASE = ITEMS.find(i => i.name === '시간외근무수당').base * calCoef('시간외근무수당'), PS_BASE = PS_RAW * calCoef('성과상여금');
+const PS_DEF = PS_FIX;
+const psAvg = (sh, rt) => sh.reduce((s, v, i) => s + v * rt[i], 0) / 100;
+const PS_DEF_SH = PS_DEF.map(g => g.share), PS_DEF_RT = PS_DEF.map(g => g.rate);
+const PS_DEF_AVG = psAvg(PS_DEF_SH, PS_DEF_RT);
+const stdState = (pre) => { const o = {}; Object.keys(PS_STD).forEach(c => { o[pre + 'bs' + c] = PS_STD[c]; o['bs' + c + 'Raw'] = undefined; }); return o; };
+const psState = (pre) => { const o = {}; PS_DEF.forEach((g, i) => { o[pre + 'sh' + i] = g.share; o[pre + 'rt' + i] = g.rate; o['sh' + i + 'Raw'] = undefined; o['rt' + i + 'Raw'] = undefined; }); return o; };
+const nf = (v, d) => Number(v).toLocaleString('ko-KR', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
+const signed = (v, d) => (v >= 0 ? '+' : '−') + nf(Math.abs(v), d);
+
+class Component extends DCLogic {
+  state = {
+    raise: BASE_RAISE, hires: 0, retirees: 0, leaves: 0,
+    p3: 0, p4: 0, p5: 0, p6: 0, p7: 0, p8: 0,
+    aRaise: BASE_RAISE, aHires: 0, aRetirees: 0, aLeaves: 0,
+    ap3: 0, ap4: 0, ap5: 0, ap6: 0, ap7: 0, ap8: 0,
+    ...psState(''), ...psState('a'),
+    compare: false, openGrade: null,
+    wide: typeof window !== 'undefined' ? window.innerWidth >= 1220 : true
+  };
+
+  componentDidMount() {
+    this._onResize = () => {
+      const w = window.innerWidth >= 1220;
+      if (w !== this.state.wide) this.setState({ wide: w });
+    };
+    window.addEventListener('resize', this._onResize);
+    this._onResize();
+  }
+
+  componentWillUnmount() { window.removeEventListener('resize', this._onResize); }
+
+  polyline(vals, xs, y) { return vals.map((v, i) => xs(i) + ',' + y(v)).join(' '); }
+
+  tabStyle(on) {
+    return 'padding: 12px 20px; margin-bottom: -1px; border: none; border-bottom: 3px solid ' + (on ? '#0d6ab8' : 'transparent') +
+      '; background: transparent; font-family: inherit; font-size: 15px; cursor: pointer; font-weight: ' + (on ? '700' : '500') + '; color: ' + (on ? '#0d6ab8' : '#525c68') + ';';
+  }
+
+  cmpStyle(on) {
+    return 'padding: 7px 14px; border-radius: 999px; border: none; font-family: inherit; font-size: 12.5px; cursor: pointer; white-space: nowrap; font-weight: ' +
+      (on ? '700' : '400') + '; background: ' + (on ? '#ffffff' : 'transparent') + '; color: ' + (on ? '#0d6ab8' : '#3c454f') +
+      '; box-shadow: ' + (on ? '0 1px 4px rgba(13,58,102,0.14)' : 'none') + ';';
+  }
+
+  renderVals() {
+    const st = this.state;
+    const year = 2027, prevYear = year - 1;
+    const calOn = true;
+    const items = ITEMS.map(it => ({ ...it, fc: it.base * (calOn ? calCoef(it.name) : 1) }));
+    const total = items.reduce((s, it) => s + it.fc, 0);
+    const rawTotal = ITEMS.reduce((s, it) => s + it.base, 0);
+    const calTotal = ITEMS.reduce((s, it) => s + it.base * calCoef(it.name), 0);
+    const prevTotal = Math.round(calTotal / 1.056);
+    const ACCURACY = (() => {
+      const plans = [];
+      let p = prevTotal;
+      for (let i = ACC_META.length - 1; i >= 0; i--) { p = Math.round(p / ACC_META[i].growth); plans[i] = p; }
+      return ACC_META.map((m, i) => ({ year: m.year, plan: plans[i], actual: Math.round(plans[i] * (1 + m.err)) }));
+    })();
+    const delta = total - prevTotal;
+    const maxItem = Math.max(...items.map(i => i.fc));
+
+    const dirty = st.raise !== st.aRaise || st.hires !== st.aHires || st.retirees !== st.aRetirees || st.leaves !== st.aLeaves ||
+      PROMOTABLE.some(g => st['p' + g.col] !== st['ap' + g.col]);
+    const shOk = true;
+    const stdOf = pre => { const o = {}; Object.keys(PS_STD).forEach(c => { o[c] = st[pre + 'bs' + c]; }); return o; };
+    const promoOf = pre => { const o = {}; PROMOTABLE.forEach(g => { o[g.col] = st[pre + 'p' + g.col]; }); return o; };
+    const psMul = psFund(psStdAt(st.aRaise), promoOf('a')) / PS_FORMULA;
+    const psPendMul = psFund(psStdAt(st.raise), promoOf('')) / PS_FORMULA;
+    const raiseDiff = (st.aRaise - BASE_RAISE) / 100;
+    const netFte = st.aHires * 0.75 - st.aRetirees - st.aLeaves * 0.6;
+    const hcMul = 1 + netFte / HEADCOUNT;
+    const promoAnnual = PROMOTABLE.reduce((s, g) => s + st['ap' + g.col] * promoGap(g) * 12, 0) / 1e6;
+    const promoDiff = promoAnnual / BASE_SALARY;
+    const factor = it => (1 + (raiseDiff + promoDiff) * it.sens) * (1 + (hcMul - 1) * it.hc) * (it.name === '성과상여금' ? psMul : 1);
+    const psPending = PS_BASE * psPendMul * (1 + (st.hires * 0.75 - st.retirees - st.leaves * 0.6) / HEADCOUNT);
+    const mkPs = (key) => ({
+      text: st[key + 'Raw'] !== undefined ? st[key + 'Raw'] : String(st[key]),
+      onInput: e => {
+        const raw = e.target.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');
+        const v = parseFloat(raw);
+        this.setState({ [key + 'Raw']: raw, [key]: isNaN(v) ? 0 : Math.min(v, key.startsWith('bs') ? 99999 : 999) });
+      }
+    });
+
+    const simItems = items.map(it => {
+      const sim = it.fc * factor(it);
+      const d = sim - it.fc;
+      return {
+        name: it.name,
+        basePct: (it.fc / maxItem * 100).toFixed(1) + '%',
+        simPct: (Math.min(sim / maxItem, 1) * 100).toFixed(1) + '%',
+        deltaText: Math.abs(d) < 0.5 ? '—' : signed(d, 0),
+        deltaColor: Math.abs(d) < 0.5 ? '#6e7884' : d > 0 ? '#de3412' : '#228738'
+      };
+    });
+    const simTotal = items.reduce((s, it) => s + it.fc * factor(it), 0);
+    const simDelta = simTotal - total;
+    const simPct = simDelta / total * 100;
+    const flat = Math.abs(simDelta) < 0.5;
+    const tabSim = st.tab === 'sim';
+    const arw = (v, b, force) => {
+      if (!(showSimArw || force) || Math.abs(v - b) < 0.5) return { ar: '', col: '#6e7884' };
+      return v > b ? { ar: '▲', col: '#de3412' } : { ar: '▼', col: '#228738' };
+    };
+    const showSim = st.compare && !flat && tabSim;
+    const showSimArw = showSim;
+    const rm = st.rpMode || 'cmp';
+    const rf = it => rm === 'base' ? 1 : factor(it);
+    const rRaise = rm === 'base' ? BASE_RAISE : st.aRaise;
+    const rpT = rm === 'base' ? total : simTotal;
+    const psItem = items.find(it => it.name === '성과상여금');
+    const psShown = PS_BASE;
+
+    const monthly = MONTHS.map((_, m) => items.reduce((s, it) => s + it.fc * it.w[m], 0));
+    const simMonthly = MONTHS.map((_, m) => items.reduce((s, it) => s + it.fc * factor(it) * it.w[m], 0));
+
+    const monthMax = Math.max(...monthly.concat(showSim ? simMonthly : []));
+    const mkBar = (m) => {
+      const v = monthly[m], sv = simMonthly[m];
+      const special = [0, 1, 2, 6, 8, 11].indexOf(m) >= 0;
+      const segs = STACK_GROUPS.slice().reverse().map(g => {
+        const amt = items.filter(it => g.keys.indexOf(it.name) >= 0)
+          .reduce((s, it) => s + it.fc * it.w[m], 0);
+        return { color: g.color, h: (amt / v * 100).toFixed(2) + '%' };
+      }).filter(s => parseFloat(s.h) > 0.1);
+      const outer = showSim ? Math.max(v, sv) : v;
+      return {
+        label: MONTHS[m], segs,
+        text: nf(showSim ? sv : v),
+        textColor: showSim ? '#0d6ab8' : '#6b7580',
+        h: (outer / monthMax * 86).toFixed(1) + '%',
+        baseH: (v / outer * 100).toFixed(1) + '%',
+        simH: (sv / outer * 100).toFixed(1) + '%',
+        simDisplay: showSim ? 'block' : 'none',
+        weight: special ? '700' : '400',
+        labelColor: special ? '#1e2124' : '#6e7884'
+      };
+    };
+    const Q_NOTES = ['정근수당(1월) · 명절휴가비(2월) · 성과상여금(3월)', '고정 지급 분기 · 특이 지급 없음', '정근수당(7월) · 명절휴가비(9월)', '연가보상비(12월)'];
+    const quarters = [0, 1, 2, 3].map(q => {
+      const sl = (arr) => arr.slice(q * 3, q * 3 + 3).reduce((s, x) => s + x, 0);
+      const v = sl(monthly), sv = sl(simMonthly), d = sv - v;
+      return {
+        label: (q + 1) + '분기', months: (q * 3 + 1) + '~' + (q * 3 + 3) + '월',
+        text: nf(showSim ? sv : v),
+        sharePct: ((showSim ? sv : v) / (showSim ? simTotal : total) * 100).toFixed(1) + '%',
+        barPct: (v / (total / 4) * 25).toFixed(1) + '%',
+        deltaText: showSim && Math.abs(d) >= 0.5 ? signed(d, 0) : '',
+        deltaColor: d > 0 ? '#de3412' : '#228738',
+        note: Q_NOTES[q],
+        bars: [0, 1, 2].map(i => mkBar(q * 3 + i))
+      };
+    });
+
+    const otVals = OT_W.map(w => OT_BASE * w);
+    const otLo = Math.min(...otVals) * 0.82, otHi = Math.max(...otVals) * 1.05;
+    const otX = i => 50 + i * 100;
+    const otY = v => 14 + (1 - (v - otLo) / (otHi - otLo)) * 168;
+    const otLine = otVals.map((v, i) => otX(i) + ',' + otY(v)).join(' ');
+
+    const mkCounter = (key, label, hint) => ({
+      label, hint, value: st[key],
+      text: st[key + 'Raw'] !== undefined ? st[key + 'Raw'] : nf(st[key]),
+      onInput: e => {
+        const raw = e.target.value.replace(/[^0-9]/g, '');
+        this.setState({ [key + 'Raw']: raw === '' ? '' : nf(parseInt(raw, 10)), [key]: raw === '' ? 0 : parseInt(raw, 10) });
+      },
+      onBlur: () => this.setState({ [key + 'Raw']: undefined })
+    });
+
+    return {
+      year, prevYear, asOf: '2026-09-03',
+      baseRaiseText: BASE_RAISE.toFixed(1),
+      headcountText: nf(HEADCOUNT),
+      totalText: nf(total), totalEok: nf(total / 100, 1),
+      prevTotalText: nf(prevTotal),
+      deltaText: signed(delta, 0), deltaPctText: '+' + (delta / prevTotal * 100).toFixed(1),
+      perCapitaText: nf(total / HEADCOUNT, 1) + '백만원',
+      items: items.map(it => ({
+        name: it.name, color: it.color,
+        widthPct: (it.fc / maxItem * 100).toFixed(1) + '%',
+        fcText: nf(it.fc), sharePct: (it.fc / total * 100).toFixed(1) + '%'
+      })),
+      accRows: ACCURACY.map(r => {
+        const err = (r.actual - r.plan) / r.plan * 100;
+        const ok = Math.abs(err) <= 0.5;
+        return {
+          year: r.year + '년',
+          planText: nf(r.plan), actualText: nf(r.actual),
+          diffText: signed(r.actual - r.plan, 0),
+          errText: (err >= 0 ? '+' : '−') + Math.abs(err).toFixed(2) + '%',
+          errColor: ok ? '#228738' : '#de3412',
+          barPct: Math.min(Math.abs(err) / 1 * 100, 100).toFixed(1) + '%',
+          barColor: ok ? '#83bd3f' : '#de3412',
+          judgeText: ok ? '충족' : '미달',
+          judgeBg: ok ? '#eaf5ec' : '#fdeeea'
+        };
+      }),
+      accAvgText: (ACCURACY.reduce((s, r) => s + Math.abs((r.actual - r.plan) / r.plan * 100), 0) / ACCURACY.length).toFixed(2),
+      accMetText: ACCURACY.filter(r => Math.abs((r.actual - r.plan) / r.plan * 100) <= 0.5).length + ' / ' + ACCURACY.length,
+      quarters, stackLegend: STACK_GROUPS,
+      planSubtitle: showSim
+        ? '단위: 백만원 · 색 막대 = 추계안, 점선 = 조정안'
+        : '단위: 백만원 · 총액은 추계값, 월별 배분은 법령상 지급 시기에 따른 계획값',
+      tableRows: MONTHS.map((label, m) => {
+        const cells = items.map(it => {
+          const b = it.fc * it.w[m], v = b * (showSim ? factor(it) : 1);
+          const a = arw(v, b);
+          return { text: v < 0.5 ? '−' : nf(v), color: v < 0.5 ? '#c3ccd6' : '#1e2124', ar: a.ar, arColor: a.col };
+        });
+        const mt = arw(showSim ? simMonthly[m] : monthly[m], monthly[m]);
+        return { label, cells, totalText: nf(showSim ? simMonthly[m] : monthly[m]), totalAr: mt.ar, totalArColor: mt.col, bg: m % 2 ? '#fbfcfe' : '#ffffff' };
+      }),
+      onPrint: () => this.setState({ rpOpen: true }),
+      rpOpen: !!st.rpOpen,
+      onRpClose: () => this.setState({ rpOpen: false }),
+      stopProp: e => e.stopPropagation(),
+      onRpGo: () => { this.setState({ rpOpen: false }); setTimeout(() => window.print(), 150); },
+      rpNoSimWarn: rm !== 'base' && flat,
+      rpOptions: [
+        { k: 'base', title: '추계안만', desc: '현재 조건 그대로의 ' + nf(total) + '백만원 기준' },
+        { k: 'sim', title: '시뮬레이션만', desc: '적용한 조건의 조정안 ' + nf(simTotal) + '백만원 기준' },
+        { k: 'cmp', title: '추계안·시뮬레이션 비교', desc: '두 안을 나란히, 차이와 ▲▼ 표시' }
+      ].map(o => { const on = rm === o.k; return { ...o, onPick: () => this.setState({ rpMode: o.k }),
+        ring: on ? '#0d6ab8' : '#b5c0cc', dot: on ? '#0d6ab8' : 'transparent',
+        style: 'display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 10px; font-family: inherit; cursor: pointer; background: ' + (on ? '#eef4f9' : '#ffffff') + '; border: 1px solid ' + (on ? '#0d6ab8' : '#e3ebf4') + ';' }; }),
+      rpCmp: rm === 'cmp', rpOne: rm !== 'cmp', rpShowPromo: rm !== 'base',
+      rpPsNo: rm === 'base' ? '6' : '7', rpLastNo: rm === 'base' ? '7' : '8',
+      rpModeLabel: rm === 'base' ? '추계안(현재 조건 그대로)' : (rm === 'sim' ? '시뮬레이션 조정안' : '추계안 · 시뮬레이션 조정안 비교'),
+      rpOneLabel: rm === 'base' ? '추계안' : '조정안',
+      rpBasisLabel: rm === 'base' ? '추계안' : '조정안',
+      rpOneTotalText: nf(rpT), rpOneYoyText: signed(rpT - prevTotal, 0), rpOneYoyPct: signed((rpT - prevTotal) / prevTotal * 100, 1),
+      calNote: '과거 실적 보정 적용 · 보정 전 ' + nf(rawTotal) + '백만원',
+      calRows: CAL.map(c => {
+        const g = STACK_GROUPS.find(x => x.name === c.group);
+        const raw = ITEMS.filter(it => g.keys.indexOf(it.name) >= 0).reduce((s, it) => s + it.base, 0);
+        const avg = calAvg(c), cal = raw * avg, d = cal - raw;
+        return { name: c.group, color: g.color, yrs: c.yrs.map(v => v.toFixed(3)), avg: avg.toFixed(3),
+          raw: nf(raw), cal: nf(cal), diff: signed(d, 0), diffColor: d >= 0 ? '#de3412' : '#228738' };
+      }),
+      rawTotalText: nf(rawTotal), calTotalText: nf(calTotal), calDiffText: signed(calTotal - rawTotal, 0),
+      calAvgAll: (calTotal / rawTotal).toFixed(3),
+      rpDate: new Date().toLocaleDateString('ko-KR'),
+      rpSimTotalText: nf(simTotal),
+      rpDiffText: signed(simDelta, 0), rpDiffPct: signed(simPct, 2),
+      rpYoyText: signed(simTotal - prevTotal, 0), rpYoyPct: signed((simTotal - prevTotal) / prevTotal * 100, 1),
+      rpBaseSalaryText: nf(BASE_SALARY),
+      rpConds: (() => {
+        const pr = PROMOTABLE.filter(g => st['ap' + g.col] > 0).map(g => PAY_COLS[g.col] + '→' + PAY_COLS[g.col - 1] + ' ' + st['ap' + g.col] + '명');
+        const rows = [
+          { k: '보수 인상률', b: BASE_RAISE.toFixed(1) + '%', v: st.aRaise.toFixed(1) + '%' },
+          { k: '신규 채용', b: '0명', v: nf(st.aHires) + '명' },
+          { k: '퇴직', b: '0명', v: nf(st.aRetirees) + '명' },
+          { k: '휴직', b: '0명', v: nf(st.aLeaves) + '명' },
+          { k: '진급', b: '없음', v: pr.length ? pr.join(' · ') : '없음' },
+          { k: '성과상여금 지급기준액(천원)', b: (() => { const s = psStdAt(BASE_RAISE); return Object.keys(s).map(c => PAY_COLS[c] + ' ' + nf(s[c])).join(' · '); })(),
+            v: (() => { const s = psStdAt(st.aRaise); return Object.keys(s).map(c => PAY_COLS[c] + ' ' + nf(s[c])).join(' · '); })() }
+        ];
+        return rows.map(r => ({ ...r, one: rm === 'base' ? r.b : r.v, weight: r.b === r.v ? '400' : '700', mark: r.b === r.v ? '' : '변경' }));
+      })(),
+      rpItems: items.map(it => {
+        const sim = it.fc * factor(it), d = sim - it.fc, one = it.fc * rf(it);
+        const g = STACK_GROUPS.find(x => x.keys.indexOf(it.name) >= 0);
+        return { group: g.name, name: it.name, base: nf(it.fc), sim: nf(sim), one: nf(one), oneShare: (one / rpT * 100).toFixed(1) + '%',
+          diff: Math.abs(d) < 0.5 ? '−' : signed(d, 0), share: (sim / simTotal * 100).toFixed(1) + '%' };
+      }),
+      rpMonthHeads: MONTHS,
+      rpGradeHeads: STAFF.map(g => PAY_COLS[g.col]),
+      rpStepRows: PAY.map((_, i) => i).filter(i => STAFF.some(g => g.counts[i] > 0)).map(i => ({
+        step: (i + 1) + '호봉',
+        cells: STAFF.map(g => {
+          const c = g.counts[i] || 0, p = PAY[i][g.col];
+          return { n: c ? nf(c) : '−', pay: p == null ? '−' : nf(p), color: c ? '#111111' : '#999999' };
+        }),
+        total: nf(STAFF.reduce((s, g) => s + (g.counts[i] || 0), 0))
+      })),
+      rpStepTotals: STAFF.map(g => nf(g.n)),
+      rpGradeAnnual: STAFF.map(g => nf(g.monthly * 12 / 1e6)),
+      rpCross: items.map(it => {
+        const f = rf(it), ca = rm === 'cmp';
+        return { name: it.name, weight: '400', bg: '#ffffff',
+          cells: MONTHS.map((_, m) => { const b = it.fc * it.w[m], v = b * f, a = arw(v, b, ca); return { t: v < 0.5 ? '−' : nf(v), ar: ca ? a.ar : '', col: a.col }; }),
+          total: nf(it.fc * f), totalAr: ca ? arw(it.fc * f, it.fc, true).ar : '', totalCol: arw(it.fc * f, it.fc, true).col };
+      }).concat([{ name: '월 합계', weight: '700', bg: '#eeeeee', cells: (rm === 'base' ? monthly : simMonthly).map((v, m) => { const a = arw(v, monthly[m], true); return { t: nf(v), ar: rm === 'cmp' ? a.ar : '', col: a.col }; }),
+        total: nf(rpT), totalAr: rm === 'cmp' ? arw(simTotal, total, true).ar : '', totalCol: arw(simTotal, total, true).col }]),
+      rpPromo: PROMOTABLE.map(g => {
+        const n = st['ap' + g.col], gap = promoGap(g);
+        return { label: PAY_COLS[g.col] + ' → ' + PAY_COLS[g.col - 1],
+          dist: (PROMO_DIST[g.col] || []).map(d => d.step + '호봉 ' + Math.round(d.share * 100) + '%').join(' · '),
+          gap: '+' + nf(gap, 0), n: nf(n) + '명', annual: n ? nf(n * gap * 12 / 1e6, 1) : '−' };
+      }),
+      rpPsRaiseText: rRaise.toFixed(1),
+      rpPsFundText: nf(psItem.fc * rf(psItem)),
+      rpPsStd: (() => {
+        const s27 = psStdAt(rRaise), fund = psItem.fc * rf(psItem);
+        const raw = STAFF.map(g => g.n * PS_TARGET * (s27[g.col] || 0));
+        const rs = raw.reduce((a, b) => a + b, 0) || 1;
+        return STAFF.map((g, i) => ({ name: PAY_COLS[g.col], nText: nf(g.n * PS_TARGET) + '명',
+          std26: nf(PS_STD[g.col] || 0), std27: nf(s27[g.col] || 0), amt: nf(fund * raw[i] / rs) }));
+      })(),
+      rpPs: (() => {
+        const G = PS_DEF.map(g => ({ name: g.name, share: g.share / 100, rate: g.rate }));
+        const fund = psItem.fc * rf(psItem);
+        const wsum = G.reduce((s, g) => s + g.share * g.rate, 0) || 1;
+        const target = Math.round(HEADCOUNT * 0.98);
+        return G.map(g => ({ name: g.name + '등급', headPct: nf(g.share * 100, 0) + '%', nText: nf(Math.round(target * g.share)) + '명',
+          rateText: g.rate + '%', amtText: nf(fund * g.share * g.rate / wsum), sharePct: (g.share * g.rate / wsum * 100).toFixed(1) + '%' }));
+      })(),
+      xTotals: items.map(it => { const v = it.fc * (showSim ? factor(it) : 1), a = arw(v, it.fc); return { text: nf(v), ar: a.ar, arColor: a.col }; }),
+      xGrandAr: arw(showSim ? simTotal : total, total).ar, xGrandArColor: arw(showSim ? simTotal : total, total).col,
+      xGrandText: nf(showSim ? items.reduce((s, it) => s + it.fc * factor(it), 0) : total),
+      xSubText: showSim ? '시뮬레이션 적용값 · ▲ 추계안보다 증가 · ▼ 감소' : '추계안',
+
+      tabSim, tabBase: !tabSim,
+      onTabBase: () => this.setState({ tab: 'base' }), onTabSim: () => this.setState({ tab: 'sim' }),
+      tabBaseStyle: this.tabStyle(!tabSim), tabSimStyle: this.tabStyle(tabSim),
+      asideStyle: 'display: flex; flex-direction: column; gap: 12px; min-width: 0; ' + (st.wide
+        ? 'flex: 0 0 400px; position: static; height: auto; max-height: none; overflow: visible; padding-right: 0;'
+        : 'flex: 1 1 100%; width: 100%;'),
+      mainColStyle: 'display: flex; flex-direction: column; gap: 14px; min-width: 0; ' + (st.wide
+        ? 'flex: 1 1 0; position: static; height: auto; max-height: none; overflow: visible; padding-right: 0;'
+        : 'flex: 1 1 100%; width: 100%;'),
+      otTargetText: nf(Math.round(HEADCOUNT * 0.93)),
+      otTotalText: nf(OT_BASE), otPrevText: nf(OT_PREV) + '백만원',
+      otPctText: '+' + ((OT_BASE - OT_PREV) / OT_PREV * 100).toFixed(1),
+      otLine: otLine,
+      otArea: otLine + ' 1150,190 50,190',
+      otPoints: otVals.map((v, i) => {
+        const on = this.state.otHover === i, y = otY(v) / 200 * 110;
+        return { short: SHORT[i], label: (i + 1) + '월', valText: nf(v) + '백만원', op: on ? 1 : 0,
+          topPx: y + 'px', tipTop: (y - 8) + 'px', onEnter: () => this.setState({ otHover: i }),
+          tipLeft: i < 2 ? '0' : (i > 9 ? '100%' : '50%'), tipTf: i < 2 ? 'translate(0, -100%)' : (i > 9 ? 'translate(-100%, -100%)' : 'translate(-50%, -100%)') };
+      }),
+      otLeave: () => this.setState({ otHover: null }),
+      ...(() => {
+        const hires = HC_HIRE.map((v, i) => v + Math.round(st.aHires * HC_HIRE_W[i]));
+        const rets = HC_RET.map((v, i) => v + Math.round(st.aRetirees * HC_RET_W[i]));
+        let n = HEADCOUNT; const ends = [];
+        for (let i = 0; i < 12; i++) { n += hires[i] - rets[i]; ends.push(n); }
+        const lv = HC_LEAVE.map(v => v + Math.round(st.aLeaves));
+        const work = ends.map((e, i) => e - lv[i]);
+        const lo = Math.min(...work) - 60, hi = Math.max(...work) + 10;
+        const sumH = hires.reduce((a, b) => a + b, 0), sumR = rets.reduce((a, b) => a + b, 0);
+        return {
+          hcEndText: nf(ends[11]), hcInText: nf(sumH), hcOutText: nf(sumR),
+          hcAvgWorkText: nf(work.reduce((a, b) => a + b, 0) / 12), hcLvAvgText: nf(lv.reduce((a, b) => a + b, 0) / 12) + '명',
+          hcMonths: ends.map((e, i) => {
+            const on = this.state.hcHover === i;
+            const ev = [hires[i] ? '채용 +' + hires[i] : '', rets[i] ? (HC_RET_TYPE[i] || '퇴직') + ' −' + rets[i] : ''].filter(Boolean).join(' · ');
+            return { short: SHORT[i], label: (i + 1) + '월말', workText: nf(work[i]), nText: nf(e), lvText: nf(lv[i]),
+              evText: ev ? ' · ' + ev : '', hPct: ((work[i] - lo) / (hi - lo) * 100).toFixed(1) + '%',
+              op: on ? 1 : 0, barColor: on ? '#2b8ad0' : '#7cc0e6', onEnter: () => this.setState({ hcHover: i }),
+              tipLeft: i < 3 ? '0' : (i > 8 ? '100%' : '50%'), tipTf: i < 3 ? 'translate(0, -6px)' : (i > 8 ? 'translate(-100%, -6px)' : 'translate(-50%, -6px)') };
+          }),
+          hcLeave: () => this.setState({ hcHover: null })
+        };
+      })(),
+      psTotalText: nf(psShown), psPrevText: nf(PS_PREV) + '백만원',
+      psPctText: signed((psShown - PS_PREV) / PS_PREV * 100, 1),
+      psDistText: PS_DEF_SH.join(' / '),
+      psBaseAvgText: nf(PS_DEF_AVG, 1),
+      psFixText: PS_DEF.map(g => g.name + ' ' + g.share + '%·' + g.rate + '%').join(' / '),
+      psStdText: Object.keys(PS_STD).map(c => PAY_COLS[c] + ' ' + nf(PS_STD[c])).join(' · '),
+      psSimText: Math.abs(psPending - PS_BASE) < 0.5 ? '변동 없음' : signed(psPending - PS_BASE, 0) + '백만원',
+      psSimColor: Math.abs(psPending - PS_BASE) < 0.5 ? '#6e7884' : psPending > PS_BASE ? '#de3412' : '#228738',
+      psGrades: (() => {
+        const G = PS_DEF.map(g => ({ name: g.name, share: g.share / 100, rate: g.rate, color: g.color }));
+        const PS_BASE = psShown;
+        const wsum = G.reduce((s, g) => s + g.share * g.rate, 0);
+        const target = Math.round(HEADCOUNT * 0.98);
+        return G.map(g => {
+          const amt = PS_BASE * (g.share * g.rate) / wsum;
+          const n = Math.round(target * g.share);
+          return {
+            name: g.name + '등급', color: g.color,
+            nText: nf(n), headPct: nf(g.share * 100, 0) + '%', rateText: g.rate + '%',
+            amtText: nf(amt), sharePct: (g.share * g.rate / wsum * 100).toFixed(1) + '%',
+            widthPct: (g.share * g.rate / wsum * 100).toFixed(1) + '%',
+            perText: n ? nf(amt * 1e6 / n / 1e4, 0) : '0'
+          };
+        });
+      })(),
+      psTargetText: nf(Math.round(HEADCOUNT * 0.98)),
+      hasSim: !flat, noSim: flat,
+      showSim, showBase: !showSim,
+      groupCards: STACK_GROUPS.map(g => {
+        const its = items.filter(it => g.keys.indexOf(it.name) >= 0);
+        const val = it => showSim ? it.fc * factor(it) : it.fc;
+        const base = its.reduce((s, it) => s + it.fc, 0);
+        const sum = its.reduce((s, it) => s + val(it), 0), tot = showSim ? simTotal : total;
+        const p = sum / tot, C = 2 * Math.PI * 42, d = sum - base;
+        const dTxt = x => showSim && Math.abs(x) >= 0.5 ? signed(x, 0) : '';
+        const dCol = x => x >= 0 ? '#de3412' : '#228738';
+        return { name: g.name, color: g.color, sumText: nf(sum), pctText: (p * 100).toFixed(1) + '%',
+          dash: (p * C).toFixed(1) + ' ' + C.toFixed(1), countText: its.length + '개 항목',
+          diffText: dTxt(d), diffColor: dCol(d),
+          rows: its.map(it => { const v = val(it), x = v - it.fc;
+            return { name: it.name, fcText: nf(v), inPct: (v / sum * 100).toFixed(1) + '%', w: (v / sum * 100).toFixed(1) + '%', diffText: dTxt(x), diffColor: dCol(x) }; }) };
+      }),
+      donutShow: true, barsShow: false,
+      donutNote: showSim ? '조정안 기준 · 도넛 = 분류별 총액 대비 비중 · 색 숫자 = 추계안 대비 차이(백만원)' : '도넛 = 분류별 총액 대비 비중 · 항목 옆 % = 분류 안 비중',
+      itemsSubtitle: showSim ? '조정안 · 단위 백만원 · 색 숫자는 추계안 대비 차이' : '단위: 백만원 · 총액 대비 구성비',
+      itemsTotalText: showSim ? nf(simTotal) : nf(total),
+      cmpOffStyle: this.cmpStyle(!st.compare),
+      cmpOnStyle: this.cmpStyle(st.compare),
+      onCompareOff: () => this.setState({ compare: false }),
+      onCompareOn: () => this.setState({ compare: true }),
+
+      raise: st.raise, raiseText: st.raise.toFixed(1),
+      onRaise: e => this.setState({ raise: parseFloat(e.target.value) }),
+      counters: [
+        mkCounter('hires', '신규 채용', '연중 채용 가중 75%'),
+        mkCounter('retirees', '퇴직', '정년·명예퇴직 포함'),
+        mkCounter('leaves', '휴직', '무급 휴직 60% 감액')
+      ],
+      promoRows: PROMOTABLE.map(g => mkCounter('p' + g.col, PAY_COLS[g.col] + ' → ' + PAY_COLS[g.col - 1], '최근 승진자 호봉 분포 및 호봉 재획정 기준 가중평균 적용')),
+      stepAnnualText: nf(STEP_ANNUAL),
+      stepPctText: (STEP_ANNUAL / BASE_SALARY * 100).toFixed(2),
+      promoAnnualText: promoAnnual < 0.5 ? '0' : signed(promoAnnual, 0),
+      payRows: STAFF.map(g => ({
+        name: PAY_COLS[g.col],
+        nText: nf(g.n), stepText: g.avgStep.toFixed(1) + '호봉',
+        payText: nf(g.monthly / g.n, 0),
+        annualText: nf(g.monthly * 12 / 1e6, 0),
+        gapText: '+' + nf(g.stepUp / g.n, 0),
+        sharePct: (g.n / HEADCOUNT * 100).toFixed(1) + '%',
+        open: st.openGrade === g.col,
+        markText: st.openGrade === g.col ? '접기' : '호봉별 보기',
+        onToggle: () => this.setState(s => ({ openGrade: s.openGrade === g.col ? null : g.col })),
+        steps: g.counts.map((c, i) => ({
+          stepText: (i + 1) + '호봉', nText: nf(c),
+          payText: nf(payAt(g.col, i + 1)),
+          subText: nf(c * payAt(g.col, i + 1) * 12 / 1e6, 0),
+          dim: c ? '#1e2124' : '#c3ccd6',
+          bg: c ? '#ffffff' : '#fbfcfe'
+        })).filter(r => r.nText !== '0')
+      })),
+
+      baseSalaryText: nf(BASE_SALARY),
+      dirty,
+      applyStyle: 'flex: 1.4; height: 42px; border-radius: 8px; font-family: inherit; font-size: 14px; font-weight: 700; white-space: nowrap; cursor: ' +
+        (dirty && shOk ? 'pointer' : 'default') + '; border: 1px solid ' + (dirty && shOk ? '#0d6ab8' : '#dbe3ec') +
+        '; background: ' + (dirty && shOk ? '#0d6ab8' : '#f1f4f8') + '; color: ' + (dirty && shOk ? '#ffffff' : '#9aa5b1') + ';',
+      applyLabel: dirty ? (shOk ? '시뮬레이션 적용' : '비율 합계 확인') : (flat ? '조건을 바꾸면 적용 가능' : '✓ 적용됨'),
+      onApply: () => { if (!shOk) return; this.setState(s => {
+        const next = { aRaise: s.raise, aHires: s.hires, aRetirees: s.retirees, aLeaves: s.leaves, compare: true };
+        PROMOTABLE.forEach(g => { next['ap' + g.col] = s['p' + g.col]; });
+        return next;
+      }); },
+      onReset: () => {
+        const next = { raise: BASE_RAISE, hires: 0, retirees: 0, leaves: 0, hiresRaw: undefined, retireesRaw: undefined, leavesRaw: undefined, aRaise: BASE_RAISE, aHires: 0, aRetirees: 0, aLeaves: 0, ...psState(''), ...psState('a') };
+        PROMOTABLE.forEach(g => { next['p' + g.col] = 0; next['ap' + g.col] = 0; next['p' + g.col + 'Raw'] = undefined; });
+        this.setState(next);
+      },
+      appliedRaiseText: st.aRaise.toFixed(1),
+      simTotalText: nf(simTotal), simTotalEok: nf(simTotal / 100, 1),
+      simDeltaText: flat ? '0' : signed(simDelta, 0),
+      simDeltaEok: flat ? '0' : signed(simDelta / 100, 1),
+      simDeltaPctText: (simPct >= 0 ? '+' : '−') + Math.abs(simPct).toFixed(2),
+      simDeltaColor: flat ? '#3c454f' : simDelta > 0 ? '#de3412' : '#228738',
+      simBadgeBg: flat ? '#eef2f7' : simDelta > 0 ? '#fdeeea' : '#eaf5ec',
+      simBadgeText: flat ? '추계안과 동일' : simDelta > 0 ? '증액' : '감액',
+      netHeadText: signed(netFte, 1),
+      simItems
+    };
+  }
+}
+</script>
+</body>
+</html>
